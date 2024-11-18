@@ -18,8 +18,6 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
-  console.log(user)
-
   // OnAuth State Change handler =====================
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -59,9 +57,20 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  const [brands, setBrands] = useState([])
+  useEffect(()=>{
+    const fetchBrands = async () => {
+      const res = await fetch('/coupon.json'); // Fetch the JSON file
+      const brandData = await res.json(); // Parse the JSON response
+      setBrands(brandData); // Update the state with the fetched data
+    };
+    fetchBrands();
+  },[])
+
   const dataInfo = {
     loading,
     user,
+    brands,
     setUser,
     signUpUser,
     signInUser,

@@ -1,0 +1,240 @@
+[
+  {
+    "_id": "1f7a2b23-d441-4d4e-9dff-2b8aef341d34",
+    "brand_name": "Apple",
+    "rating": 4.5,
+    "description": "Your one-stop shop for the latest gadgets and electronics.",
+    "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    "coupons": [
+      {
+        "coupon_code": "APPLE20OFF",
+        "description": "Flat $20 off on your next purchase.",
+        "expiry_date": "2024-11-30",
+        "condition": "Applicable on orders above $100.",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "APPLEFREESHIP",
+        "description": "Free shipping on orders over $75.",
+        "expiry_date": "2024-12-10",
+        "condition": "Applicable for online orders.",
+        "coupon_type": "free_shipping"
+      }
+    ],
+    "shop_link": "https://www.apple.com",
+    "category": "Electronics",
+    "isSaleOn": true
+  },
+  {
+    "_id": "5c8f8e11-b6a9-4e32-94b8-56cccd0023d8",
+    "brand_name": "Nike",
+    "rating": 4.7,
+    "description": "Trendy and stylish fashion wear for every occasion.",
+    "brand_logo": "https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png",
+    "coupons": [
+      {
+        "coupon_code": "NIKE15",
+        "description": "15% off on your first purchase.",
+        "expiry_date": "2024-11-25",
+        "condition": "First-time customers only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "NIKEFREE",
+        "description": "Free shipping on orders over $50.",
+        "expiry_date": "2024-12-01",
+        "condition": "No minimum purchase required.",
+        "coupon_type": "free_shipping"
+      },
+      {
+        "coupon_code": "NIKE30",
+        "description": "30% off on all footwear.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid on selected styles only.",
+        "coupon_type": "percentage"
+      }
+    ],
+    "shop_link": "https://www.nike.com",
+    "category": "Fashion",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2d3f2a87-0a77-4f3b-b36e-c8c4b5313c56",
+    "brand_name": "Aarong",
+    "rating": 4.2,
+    "description": "Everything for your home, from furniture to décor.",
+    "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/2/28/Aarong.png",
+    "coupons": [
+      {
+        "coupon_code": "AARONG5",
+        "description": "5% off on all furniture items.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid on furniture only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "AARONG50",
+        "description": "$50 off on orders over $200.",
+        "expiry_date": "2024-11-30",
+        "condition": "Orders over $200 only.",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "AARONGFREESHIP",
+        "description": "Free shipping on all home décor.",
+        "expiry_date": "2024-12-05",
+        "condition": "Minimum order $30.",
+        "coupon_type": "free_shipping"
+      }
+    ],
+    "shop_link": "https://www.aarong.com",
+    "category": "Home & Living",
+    "isSaleOn": false
+  },
+  {
+    "_id": "6b7a5d23-d91d-4a38-9e23-c8f64b01bcd8",
+    "brand_name": "Samsung",
+    "rating": 4.8,
+    "description": "The best place to find electronics and mobile devices.",
+    "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1024px-Samsung_Logo.svg.png",
+    "coupons": [
+      {
+        "coupon_code": "SAMSUNG15",
+        "description": "15% off on all mobile devices.",
+        "expiry_date": "2024-12-05",
+        "condition": "Valid on mobile category only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "SAMSUNGBUNDLE",
+        "description": "Save $100 on combo packs.",
+        "expiry_date": "2024-12-15",
+        "condition": "Combo includes phone and smartwatch.",
+        "coupon_type": "fixed"
+      }
+    ],
+    "shop_link": "https://www.samsung.com",
+    "category": "Electronics",
+    "isSaleOn": true
+  },
+  {
+    "_id": "aa4f5a9c-b9f3-4db6-b20f-9a8b2f1eaa6a",
+    "brand_name": "Bashundhara",
+    "rating": 4.4,
+    "description": "Fresh food, delivered straight to your door.",
+    "brand_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ZjviUDptiVQI7qIDOrDIoFvV0Z0wW9gs7g&s",
+    "coupons": [
+      {
+        "coupon_code": "BASHUNDHARA10",
+        "description": "10% off on your first food order.",
+        "expiry_date": "2024-11-30",
+        "condition": "First-time customers only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "BASHUNDHARAFREE",
+        "description": "Free dessert on orders above $30.",
+        "expiry_date": "2024-12-15",
+        "condition": "Orders above $30 only.",
+        "coupon_type": "free_product"
+      },
+      {
+        "coupon_code": "BASHUNDHARA5OFF",
+        "description": "Flat $5 off on any grocery order.",
+        "expiry_date": "2024-12-05",
+        "condition": "No minimum purchase required.",
+        "coupon_type": "fixed"
+      }
+    ],
+    "shop_link": "https://www.bashundhara.com",
+    "category": "Food & Beverage",
+    "isSaleOn": false
+  },
+  {
+    "_id": "b3f9d8f4-9f3f-4a21-b91f-9b2cdd8d03f7",
+    "brand_name": "Walton",
+    "rating": 4.6,
+    "description": "Offering electronic goods and home appliances.",
+    "brand_logo": "https://seeklogo.com/images/W/walton-logo-8655B6D7F3-seeklogo.com.png",
+    "coupons": [
+      {
+        "coupon_code": "WALTON20",
+        "description": "20% off on home appliances.",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid on home appliances only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "WALTONFREESHIP",
+        "description": "Free shipping on orders over $50.",
+        "expiry_date": "2024-12-01",
+        "condition": "Orders above $50 only.",
+        "coupon_type": "free_shipping"
+      },
+      {
+        "coupon_code": "WALTONCOMBO",
+        "description": "Get $25 off on combo purchases.",
+        "expiry_date": "2024-12-20",
+        "condition": "Minimum $100 combo purchase.",
+        "coupon_type": "fixed"
+      }
+    ],
+    "shop_link": "https://www.walton.com",
+    "category": "Electronics",
+    "isSaleOn": true
+  },
+  {
+    "_id": "c3f8d7f3-9b2c-4a30-a91f-2cdd8e13f001",
+    "brand_name": "H&M",
+    "rating": 4.5,
+    "description": "Affordable and stylish clothing for everyone.",
+    "brand_logo": "https://1000logos.net/wp-content/uploads/2017/02/Hennes-logo.jpg",
+    "coupons": [
+      {
+        "coupon_code": "HM15OFF",
+        "description": "15% off on your first order.",
+        "expiry_date": "2024-11-29",
+        "condition": "First-time customers only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "HMFREESHIP",
+        "description": "Free shipping on all orders.",
+        "expiry_date": "2024-12-15",
+        "condition": "No minimum purchase required.",
+        "coupon_type": "free_shipping"
+      }
+    ],
+    "shop_link": "https://www.hm.com",
+    "category": "Fashion",
+    "isSaleOn": true
+  },
+  {
+    "_id": "d5e7f9b3-4a2b-4c13-a91f-8e11e13f001",
+    "brand_name": "StarTech",
+    "rating": 4.7,
+    "description": "Bangladesh's top retailer for electronics and IT solutions.",
+    "brand_logo": "https://seeklogo.com/images/S/startech-logo-0BF29AE753-seeklogo.com.png",
+    "coupons": [
+      {
+        "coupon_code": "STAR10OFF",
+        "description": "10% off on selected electronics.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid on selected items only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "STARBONUS",
+        "description": "Get a free mouse with any laptop purchase.",
+        "expiry_date": "2024-12-20",
+        "condition": "Applicable on laptops only.",
+        "coupon_type": "free_product"
+      }
+    ],
+    "shop_link": "https://www.startech.com.bd",
+    "category": "Electronics",
+    "isSaleOn": true
+  }
+]
+
+

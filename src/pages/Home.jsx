@@ -1,9 +1,14 @@
+import Banner from "../components/Banner";
+import BestOnSales from "../components/BestOnSales";
+import BrandName from "../components/BrandName";
 
 const Home = () => {
   return (
     <>
       <section>
-        Hello I am Home 
+        <Banner/>
+        <BrandName/>
+        <BestOnSales/>
       </section>
     </>
   );

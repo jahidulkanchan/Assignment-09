@@ -1,29 +1,37 @@
 import { Link, NavLink } from "react-router-dom";
 import LogoIcon from "../assets/logo.png";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 const Navbar = () => {
+  const [isShow, setIsShow] = useState(false)
+  const handleToggleBar = () => {
+    setIsShow(!isShow)
+  }
   const { user, signOutUser } = useContext(AuthContext);
   const handleSignOutUser = ()=>{
     signOutUser()
   }
   return (
     <>
-      <section className="bg-slate-100 shadow px-5 py-2">
-      {user && <p className="text-center">Welcome {user?.displayName}</p>}
+      <section className="bg-slate-100 shadow px-2 md:px-5 py-2">
+  
         <nav className="flex justify-between items-center">
           <div>
             <Link className="logo flex gap-2 items-center" to="/">
-              <img className="h-[50px]" src={LogoIcon} alt="" />
+             <img className="h-[35px] md:h-[50px]" src={LogoIcon} alt="" />
               <h3 className="text-xl md:text-2xl font-semibold">
-                Coupon <span className="text-red-600">Kit</span>
+                Co_<span className="text-red-600">Kit</span>
               </h3>
             </Link>
           </div>
           <div className="menu">
-            <ul className="flex gap-5 items-center">
-              <li>
+          {user && <p className="text-center text-slate-500 hidden md:block">Welcome {user?.displayName}</p>}
+            <ul className={`md:flex w-full text-center z-10 container bg-slate-100 py-4 md:py-0 md:bg-transparent left-0 right-0 mx-auto absolute md:static flex-col justify-center md:flex-row gap-5 items-center ${user? 'top-[90px]' : 'top-[50px]'}  ${isShow? 'block' : 'hidden'}`}>
+              <li onClick={()=>{
+                setIsShow(!isShow)
+              }}>
                 <NavLink
                   className={({ isActive }) =>
                     `${isActive ? "text-red-500" : ""}`
@@ -33,7 +41,9 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
+              <li onClick={()=>{
+                setIsShow(!isShow)
+              }}>
                 <NavLink
                   className={({ isActive }) =>
                     `${isActive ? "text-red-500" : ""}`
@@ -44,7 +54,9 @@ const Navbar = () => {
                 </NavLink>
               </li>
               {
-                user && <li>
+                user && <li onClick={()=>{
+                  setIsShow(!isShow)
+                }}>
                 <NavLink
                   className={({ isActive }) =>
                     `${isActive ? "text-red-500" : ""}`
@@ -59,12 +71,12 @@ const Navbar = () => {
           </div>
           <div className="user-info">
             {user ? (
-              <div className="flex gap-4 items-center font-semibold">
-                <div className="flex flex-col items-center">
-                  <img src="/vite.svg" alt="" />
+              <div className="flex flex-col md:flex-row justify-center md:gap-4 items-center font-semibold">
+                <div className="flex justify-center flex-col items-center">
+                  <img className="w-6" src={user?.photoURL} alt="" />
                   <small className="text-slate-500">{user?.email}</small>
                 </div>
-                <button onClick={handleSignOutUser} className="px-4 py-2 border bg-red-300 border-red-500">Log Out</button>
+                <button onClick={handleSignOutUser} className="px-4 py-1 md:py-2 border bg-red-200 border-red-300">Log Out</button>
               </div>
             ) : (
               <div className="flex gap-8 font-semibold">
@@ -72,6 +84,9 @@ const Navbar = () => {
                 <Link to="/register">Register</Link>
               </div>
             )}
+          </div>
+          <div onClick={handleToggleBar} className="bar-icon cursor-pointer block md:hidden text-xl">
+          <FaBarsStaggered />
           </div>
         </nav>
       </section>

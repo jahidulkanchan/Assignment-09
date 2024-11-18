@@ -4,14 +4,19 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-  const {signInUser,signWithGoogle } = useContext(AuthContext)
+  const {signInUser,signWithGoogle,setUser } = useContext(AuthContext)
   const navigate = useNavigate()
 
   // Sign up with google ====================================
  
   const handleSignGoogle = ()=>{
     signWithGoogle()
-    .then((result)=> console.log(result,'login success'))
+    .then((result)=> {
+      const user = result.user
+      if(user){
+        setUser(user)
+      }
+    })
     .catch((error)=> console.log(error.message))
   }
 
