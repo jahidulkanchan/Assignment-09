@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import PrivateRoute from "../privateRoutes/PrivateRoute";
 import MyProfile from "../pages/MyProfile";
 import PrivateProfile from "../privateRoutes/PrivateProfile";
+import Brands from "../pages/Brands";
 
 
 export const router = createBrowserRouter([
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/brands',
-        element: <p>I Am Brands</p>
+        element: <Brands/>
       },
       {
         path: '/login',
