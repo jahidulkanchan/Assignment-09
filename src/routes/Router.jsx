@@ -7,6 +7,7 @@ import PrivateRoute from "../privateRoutes/PrivateRoute";
 import MyProfile from "../pages/MyProfile";
 import PrivateProfile from "../privateRoutes/PrivateProfile";
 import Brands from "../pages/Brands";
+import BrandDetails from "../pages/BrandDetails";
 
 
 export const router = createBrowserRouter([
@@ -33,6 +34,11 @@ export const router = createBrowserRouter([
       {
         path: '/my-profile',
         element: <PrivateProfile><MyProfile></MyProfile></PrivateProfile>
+      },
+      {
+        path: '/brand/:id',
+        loader: ()=> fetch('/coupon.json'),
+        element: <PrivateProfile><BrandDetails/></PrivateProfile>
       }
     ],
     errorElement: <div className="min-h-screen text-xl flex flex-col justify-center items-center">

@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const {signInUser,signWithGoogle,setUser } = useContext(AuthContext)
   const navigate = useNavigate()
+  const location = useLocation()
 
   // Sign up with google ====================================
  
@@ -19,15 +20,15 @@ const Login = () => {
     })
     .catch((error)=> console.log(error.message))
   }
-
+  const from = location.state?.from || "/";
   const handleSignIn = (e)=>{
     e.preventDefault();
     const email = e.target.email.value 
     const password = e.target.password.value
     signInUser(email,password)
     .then(()=> {
+      navigate(from);
       e.target.reset()
-      navigate('/')
     })
     .catch((err)=> console.log('Error', err))
   }

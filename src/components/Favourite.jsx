@@ -13,20 +13,20 @@ const Favourite = () => {
           </p>
         </div><br />
         <div className="grid gap-6 mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="cart shadow-md border pb-4">
-            <img src="https://t3.ftcdn.net/jpg/02/57/16/84/360_F_257168460_AwhicdEIavp7bdCbHXyTaBTHnBoBcZad.jpg" alt="" />
+          <div className="cart overflow-hidden shadow-md border pb-4">
+            <img className="hover:scale-110 duration-200" src="https://t3.ftcdn.net/jpg/02/57/16/84/360_F_257168460_AwhicdEIavp7bdCbHXyTaBTHnBoBcZad.jpg" alt="" />
             <p className="mt-3 text-xl text-center">Electronics</p>
           </div>
-          <div className="cart shadow-md border pb-4">
-            <img className="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmjS8ywMSOb3KUk39Ta5Ro3xb9yM6P8TLbdw&s" alt="" />
+          <div className="cart overflow-hidden shadow-md border pb-4">
+            <img className="w-full hover:scale-110 duration-200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmjS8ywMSOb3KUk39Ta5Ro3xb9yM6P8TLbdw&s" alt="" />
             <p className="mt-3 text-xl text-center">Fashion</p>
           </div>
-          <div className="cart shadow-md border pb-4">
-            <img src="https://media.designcafe.com/wp-content/uploads/2020/08/11193522/living-room-decor-ideas.jpg" alt="" />
+          <div className="cart overflow-hidden shadow-md border pb-4">
+            <img className="hover:scale-110 duration-200" src="https://media.designcafe.com/wp-content/uploads/2020/08/11193522/living-room-decor-ideas.jpg" alt="" />
             <p className="mt-3 text-xl text-center">Home & Living</p>
           </div>
-          <div className="cart shadow-md border pb-4">
-            <img src="https://dpi.ac/wp-content/uploads/2021/12/Food-and-Beverage-production.jpg" alt="" />
+          <div className="cart overflow-hidden shadow-md border pb-4">
+            <img className="hover:scale-110 duration-200" src="https://dpi.ac/wp-content/uploads/2021/12/Food-and-Beverage-production.jpg" alt="" />
             <p className="mt-3 text-xl text-center">Food & Beverage</p>
           </div>
         </div>
