@@ -18,7 +18,7 @@ const BestOnSales = () => {
           </p>
         </div>
         <br />
-        <div className="grid grid-cols-1 gap-8 mt-5 justify-center items-center md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 mt-5 justify-center items-center sm:grid-cols-2 lg:grid-cols-3">
           {isSalesOn.map((brand, index) => {
             return (
               <div className="card bg-red-100 border border-transparent hover:border-slate-200 rounded-lg overflow-hidden hover:bg-white duration-200 pt-5 shadow" key={index}>
