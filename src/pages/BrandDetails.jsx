@@ -16,7 +16,7 @@ const BrandDetails = () => {
         <h2 className="text-3xl text-center py-5 font-semibold">
           <span className="text-red-600">Top Deals</span> For You
         </h2>
-        <div className="brand-details relative flex flex-col md:flex-row items-center justify-evenly shadow-md mx-auto border p-5 my-5  md:w-4/6 lg:w-1/2">
+        <div className="brand-details bg-slate-50 relative flex flex-col md:flex-row items-center justify-evenly shadow-md mx-auto border p-5 my-5  md:w-4/6 lg:w-1/2">
           <div>
             <img
               className="p-5 h-[200px] max-w-[350px]"
@@ -26,7 +26,7 @@ const BrandDetails = () => {
             <button
               className="text-2xl hover:text-red-500 absolute left-5 bottom-4"
               onClick={() => {
-                navigate(-1);
+                navigate('/');
                 window.scrollTo(0, 0);
               }}
             >
@@ -46,8 +46,8 @@ const BrandDetails = () => {
         </div>
         <br />
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-5 ${
-            coupons.length === 2 && "lg:grid-cols-2"
+          className={`grid grid-cols-1 sm:grid-cols-2  gap-8 lg:gap-5 ${
+            coupons.length === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'
           }`}
         >
           {coupons.map((coupon, i) => (

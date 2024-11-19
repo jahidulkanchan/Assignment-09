@@ -26,6 +26,32 @@
     "isSaleOn": true
   },
   {
+    "_id": "c3f8d7f3-9b2c-4a30-a91f-2cdd8e13f001",
+    "brand_name": "H&M",
+    "rating": 4.5,
+    "description": "Update your wardrobe with H&M’s trendy fashion pieces at discounted prices, perfect for every season and style.",
+    "brand_logo": "https://1000logos.net/wp-content/uploads/2017/02/Hennes-logo.jpg",
+    "coupons": [
+      {
+        "coupon_code": "HM15OFF",
+        "description": "15% off on your first order.",
+        "expiry_date": "2024-11-29",
+        "condition": "First-time customers only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "HMFREESHIP",
+        "description": "Free shipping on all orders.",
+        "expiry_date": "2024-12-15",
+        "condition": "No minimum purchase required.",
+        "coupon_type": "free_shipping"
+      }
+    ],
+    "shop_link": "https://www.hm.com",
+    "category": "Fashion",
+    "isSaleOn": false
+  },
+  {
     "_id": "5c8f8e11-b6a9-4e32-94b8-56cccd0023d8",
     "brand_name": "Nike",
     "rating": 4.7,
@@ -89,32 +115,6 @@
     ],
     "shop_link": "https://www.aarong.com",
     "category": "Home & Living",
-    "isSaleOn": false
-  },
-  {
-    "_id": "6b7a5d23-d91d-4a38-9e23-c8f64b01bcd8",
-    "brand_name": "Samsung",
-    "rating": 4.8,
-    "description": "Grab deals on Samsung’s innovative gadgets and appliances, from cutting-edge smartphones to high-tech TVs.",
-    "brand_logo": "https://cdn.vectorstock.com/i/500p/18/66/samsung-brand-logo-phone-symbol-blue-and-white-vector-46231866.jpg",
-    "coupons": [
-      {
-        "coupon_code": "SAMSUNG15",
-        "description": "15% off on all mobile devices.",
-        "expiry_date": "2024-12-05",
-        "condition": "Valid on mobile category only.",
-        "coupon_type": "percentage"
-      },
-      {
-        "coupon_code": "SAMSUNGBUNDLE",
-        "description": "Save $100 on combo packs.",
-        "expiry_date": "2024-12-15",
-        "condition": "Combo includes phone and smartwatch.",
-        "coupon_type": "fixed"
-      }
-    ],
-    "shop_link": "https://www.samsung.com",
-    "category": "Electronics",
     "isSaleOn": true
   },
   {
@@ -151,6 +151,33 @@
     "isSaleOn": false
   },
   {
+    "_id": "6b7a5d23-d91d-4a38-9e23-c8f64b01bcd8",
+    "brand_name": "Samsung",
+    "rating": 4.8,
+    "description": "Grab deals on Samsung’s innovative gadgets and appliances, from cutting-edge smartphones to high-tech TVs.",
+    "brand_logo": "https://cdn.vectorstock.com/i/500p/18/66/samsung-brand-logo-phone-symbol-blue-and-white-vector-46231866.jpg",
+    "coupons": [
+      {
+        "coupon_code": "SAMSUNG15",
+        "description": "15% off on all mobile devices.",
+        "expiry_date": "2024-12-05",
+        "condition": "Valid on mobile category only.",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "SAMSUNGBUNDLE",
+        "description": "Save $100 on combo packs.",
+        "expiry_date": "2024-12-15",
+        "condition": "Combo includes phone and smartwatch.",
+        "coupon_type": "fixed"
+      }
+    ],
+    "shop_link": "https://www.samsung.com",
+    "category": "Electronics",
+    "isSaleOn": true
+  },
+  
+  {
     "_id": "b3f9d8f4-9f3f-4a21-b91f-9b2cdd8d03f7",
     "brand_name": "Walton",
     "rating": 4.6,
@@ -181,32 +208,6 @@
     ],
     "shop_link": "https://www.walton.com",
     "category": "Electronics",
-    "isSaleOn": true
-  },
-  {
-    "_id": "c3f8d7f3-9b2c-4a30-a91f-2cdd8e13f001",
-    "brand_name": "H&M",
-    "rating": 4.5,
-    "description": "Update your wardrobe with H&M’s trendy fashion pieces at discounted prices, perfect for every season and style.",
-    "brand_logo": "https://1000logos.net/wp-content/uploads/2017/02/Hennes-logo.jpg",
-    "coupons": [
-      {
-        "coupon_code": "HM15OFF",
-        "description": "15% off on your first order.",
-        "expiry_date": "2024-11-29",
-        "condition": "First-time customers only.",
-        "coupon_type": "percentage"
-      },
-      {
-        "coupon_code": "HMFREESHIP",
-        "description": "Free shipping on all orders.",
-        "expiry_date": "2024-12-15",
-        "condition": "No minimum purchase required.",
-        "coupon_type": "free_shipping"
-      }
-    ],
-    "shop_link": "https://www.hm.com",
-    "category": "Fashion",
     "isSaleOn": true
   },
   {

@@ -13,24 +13,24 @@ const Coupon = ({ coupon, singleData }) => {
     <>
       <div className="cart mt-5 shadow min-h-[200px] border p-3 flex flex-col">
         <img
-          className="w-28 animate__animated animate__pulse  animate__infinite mx-auto h-28 border p-3 border-black mb-2"
+          className="w-28 shadow-2xl animate__animated animate__pulse  animate__infinite mx-auto h-28 border p-3 border-black mb-2"
           src={brand_logo}
           alt=""
         />
-        <h2 className="text-xl md:text-2xl font-semibold">{description}</h2>
-        <p><b>Type:</b> {coupon_type}</p>
-        <p><b>Condition:</b> {condition}</p>
-        <p><b>Expire Date:</b> {expiry_date}</p>
+        <h2 className="text-xl text-red-600 mt-5 mb-2 md:text-2xl font-semibold">{description}</h2>
+        <p><b>Type:</b> <span className="text-slate-500">{coupon_type}</span></p>
+        <p><b>Condition:</b> <span className="text-slate-500">{condition}</span></p>
+        <p><b>Expire Date:</b> <span className="text-slate-500">{expiry_date}</span></p>
         <div className="flex-grow"></div>
         <div className="flex justify-between">
-          <Link to={shop_link} className="bg-slate-100 mt-4  font-semibold px-5 py-2 w-fit">
+          <Link to={shop_link} className="bg-slate-100 hover:bg-white mt-4 border border-black font-semibold px-5 py-2 w-fit">
             Use Now
           </Link>
           <CopyToClipboard text={coupon_code} onCopy={() => {
             setCopied(!copied);
             toast.success('Coupon copied successfully')
           }}>
-            <button className="bg-slate-50 mt-4 text-red-500 font-semibold px-5 py-2 w-fit">
+            <button className="mt-4 text-red-500 hover:bg-slate-100 border border-black font-semibold px-5 py-2 w-fit">
               Copy Code
             </button>
           </CopyToClipboard>

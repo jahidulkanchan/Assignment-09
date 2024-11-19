@@ -41,7 +41,7 @@ const Register = () => {
   }
   return (
     <>
-    <section className="flex justify-center mt-10 min-h-[90vh] items-center">
+    <section className="flex flex-col bg-slate-50 justify-center py-10 min-h-[90vh] items-center">
         <form
           onSubmit={handleSignUp}
           className="w-11/12 md:w-1/2 bg-white py-8 flex flex-col justify-center items-center border space-y-4 shadow-md mx-auto min-h-[350px]"
@@ -101,7 +101,7 @@ const Register = () => {
                 Log In
               </Link>
             </p>
-            <div  onClick={handleSignGoogle} className="flex border w-fit  mx-auto px-5 py-2 shadow cursor-pointer bg-red-200 justify-center items-center gap-2 my-5">
+            <div  onClick={handleSignGoogle} className="flex border w-fit  mx-auto px-5 py-2 shadow-2xl cursor-pointer bg-red-200 justify-center items-center gap-2 my-5">
           <FaGoogle />
           <p>Sign With Google</p>
         </div>

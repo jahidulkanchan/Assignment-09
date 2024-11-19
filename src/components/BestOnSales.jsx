@@ -21,14 +21,14 @@ const BestOnSales = () => {
         <div className="grid grid-cols-1 gap-8 mt-5 justify-center items-center sm:grid-cols-2 lg:grid-cols-3">
           {isSalesOn.map((brand, index) => {
             return (
-              <div className="card bg-red-100 border border-transparent hover:border-slate-200 rounded-lg overflow-hidden hover:bg-white duration-200 pt-5 shadow" key={index}>
-                <img className="w-[140px] mx-auto h-[120px]" src={brand.brand_logo} alt="" />
+              <div className="card bg-slate-50 border border-transparent hover:border-slate-200 rounded-lg overflow-hidden hover:bg-white duration-200 pt-5 shadow" key={index}>
+                <img className="w-[120px] mx-auto h-[100px]" src={brand.brand_logo} alt="" />
                 <div className="flex flex-col items-start md:flex-row bg-white p-5 mt-4 justify-between md:items-end">
                   <div>
-                  <h3 className="text-2xl font-semibold">{brand.brand_name}</h3>
-                  <p className="text-xl">Total Coupons: <span className="text-red-600">{brand.coupons.length}</span></p>
+                  <h3 className="text-2xl font-semibold mb-2">{brand.brand_name}</h3>
+                  <p className="text-slate-500">Total Coupons: <span className="text-red-500 font-semibold">{brand.coupons.length}</span></p>
                   </div>
-                  <p className="text-slate-500 text-lg">Category: <span className="text-red-500 font-semibold">{brand.category}</span></p>
+                  <p className="text-slate-500">Category: <span className="text-red-500 font-semibold">{brand.category}</span></p>
                 </div>
               </div>
             )
