@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const {signInUser,signWithGoogle,setUser } = useContext(AuthContext)
+  const [errorMessage, setErrorMessage] = useState('')
   const navigate = useNavigate()
   const location = useLocation()
+  console.log(location.state);
 
   // Sign up with google ====================================
  
@@ -20,17 +22,22 @@ const Login = () => {
     })
     .catch((error)=> console.log(error.message))
   }
-  const from = location.state?.from || "/";
   const handleSignIn = (e)=>{
     e.preventDefault();
     const email = e.target.email.value 
     const password = e.target.password.value
+    setErrorMessage('')
     signInUser(email,password)
-    .then(()=> {
-      navigate(from);
-      e.target.reset()
+    .then((result)=> {
+      const user = result.user
+      if(user){
+        setUser(user)
+        navigate(location?.state ? location.state : '/' )
+      }
     })
-    .catch((err)=> console.log('Error', err))
+    .catch((err)=> {
+      setErrorMessage(err.message)
+    })
   }
   return (
     <>
@@ -46,6 +53,10 @@ const Login = () => {
         </div>
         <div className="md:w-1/2">
         <button className="bg-gray-800 w-full text-lg px-5 py-3 mt-8 text-white">Log In</button>
+        {
+          errorMessage && <p className="text-red-500 mt-2">Something is wrong! <br /> please use correct email or password</p>
+        }
+        <p></p>
         <p className="mt-5 text-center text-slate-500">If you have not an account please  <Link to='/register' className="text-violet-800">Register</Link></p>
         <div  onClick={handleSignGoogle} className="flex border w-fit  mx-auto px-5 py-2 shadow cursor-pointer bg-red-200 justify-center items-center gap-2 my-5">
           <FaGoogle />

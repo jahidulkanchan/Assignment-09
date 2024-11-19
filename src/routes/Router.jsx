@@ -3,11 +3,11 @@ import MainLayout from "../mainLayout/MainLayout";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import PrivateRoute from "../privateRoutes/PrivateRoute";
 import MyProfile from "../pages/MyProfile";
 import PrivateProfile from "../privateRoutes/PrivateProfile";
 import Brands from "../pages/Brands";
 import BrandDetails from "../pages/BrandDetails";
+import PrivateRoute from "../privateRoutes/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/login',
-        element: <PrivateRoute><Login></Login></PrivateRoute>
+        element: <Login></Login>
       },
       {
         path: '/register',

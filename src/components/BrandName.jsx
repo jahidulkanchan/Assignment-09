@@ -2,6 +2,7 @@
 import Marquee from 'react-fast-marquee';
 import { AuthContext } from '../authProvider/AuthProvider';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 const BrandName = () => {
   const {brands} = useContext(AuthContext)
@@ -16,9 +17,11 @@ const BrandName = () => {
         {sliceBrands.map((brand, index) => (
           <div
             key={index}
-            className="card mx-5 my-5 shadow-md flex gap-5 items-center  px-8 py-3 md:py-5 border min-w-[200px] md:min-w-[300px] brand-name">
+            >
+            <Link onClick={()=> window.scrollTo(0,0)} to={`/brand/${brand._id}`} className="card mx-5 my-5 shadow-md flex gap-5 items-center  px-8 py-3 md:py-5 border min-w-[200px] md:min-w-[300px] brand-name">
             <img className='w-[70px] h-[50px]' src={brand.brand_logo} alt="logo" />
             <p className='text-xl font-semibold md:text-2xl'>{brand.brand_name}</p>
+            </Link>
           </div>
         ))}
       </Marquee>

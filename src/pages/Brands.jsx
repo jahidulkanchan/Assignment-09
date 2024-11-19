@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
-import { Link, useLocation} from "react-router-dom";
+import { Link} from "react-router-dom";
+import ReactStars from "react-stars";
 const Brands = () => {
-  const {pathname} = useLocation()
-  const { user, brands } = useContext(AuthContext);
+  const { brands } = useContext(AuthContext);
   const [searchQuery, setSearchQuery] = useState("");
 
   // Search any items by name ====================
@@ -20,7 +20,7 @@ const Brands = () => {
       <div className="w-10/12  md:w-1/2 mx-auto">
         <input
           type="text"
-          placeholder="Search Brands"
+          placeholder="Choose brand"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="border p-2 shadow w-full mb-10 rounded"
@@ -42,8 +42,8 @@ const Brands = () => {
                 />
                 <div className="flex items-center md:items-start mt-4 flex-col">
                   <h2 className="text-xl font-semibold">{brand.brand_name}</h2>
-                  <div className="flex text-lg items-center text-orange-500">
-                    <span>{"★".repeat(Math.round(brand.rating))}</span>
+                  <div className="flex items-center text-orange-500">
+                  <ReactStars count={5} size={20} value={brand.rating} color2={"#ffd700"} />
                     <span className="ml-2">({brand.rating})</span>
                   </div>
                 </div>
@@ -51,11 +51,10 @@ const Brands = () => {
 
               <div>
                 <h2 className="text-3xl font-semibold">{brand.brand_name}</h2>
-                <p className="text-gray-600 mb-4">{brand.description}</p>
+                <p className="text-gray-600 md:max-w-[300px] lg:max-w-[500px] mb-4">{brand.description}</p>
               </div>
               <Link
-                to={user ? `/brand/${brand._id}`: '/login'}
-                state={{ from: pathname }}
+                to={`/brand/${brand._id}`}
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
