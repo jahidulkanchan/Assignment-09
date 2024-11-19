@@ -10,15 +10,15 @@ const Navbar = () => {
   const handleToggleBar = () => {
     setIsShow(!isShow)
   }
-  const { user, signOutUser } = useContext(AuthContext);
+  const { user, signOutUser,loading } = useContext(AuthContext);
   const handleSignOutUser = ()=>{
     signOutUser()
   }
   useEffect(()=>{
-    if(user){
+    if(!loading && user){
       toast(`❤ Hey !! Welcome, ${user.displayName}`)
     }
-  },[user])
+  },[user,loading])
   
   return (
     <>
@@ -40,7 +40,7 @@ const Navbar = () => {
               }}>
                 <NavLink
                   className={({ isActive }) =>
-                    `${isActive ? "text-red-500" : ""}`
+                    `${isActive ? "text-red-600" : ""}`
                   }
                   to="/"
                 >
@@ -52,7 +52,7 @@ const Navbar = () => {
               }}>
                 <NavLink
                   className={({ isActive }) =>
-                    `${isActive ? "text-red-500" : ""}`
+                    `${isActive ? "text-red-600" : ""}`
                   }
                   to="/brands"
                 >
@@ -65,7 +65,7 @@ const Navbar = () => {
                 }}>
                 <NavLink
                   className={({ isActive }) =>
-                    `${isActive ? "text-red-500" : ""}`
+                    `${isActive ? "text-red-600" : ""}`
                   }
                   to="/my-profile"
                 >

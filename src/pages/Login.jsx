@@ -8,8 +8,6 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState('')
   const navigate = useNavigate()
   const location = useLocation()
-  console.log(location.state);
-
   // Sign up with google ====================================
  
   const handleSignGoogle = ()=>{
@@ -19,6 +17,7 @@ const Login = () => {
       if(user){
         setUser(user)
         navigate('/')
+        window.scrollTo(0,0)
       }
     })
     .catch((error)=> console.log(error.message))
@@ -44,7 +43,7 @@ const Login = () => {
   return (
     <>
       <section className="flex flex-col pb-10 bg-slate-50 justify-center min-h-[90vh] items-center">
-        <h2 className="text-3xl text-center font-semibold mb-10">Log In to Your <span className="text-red-600">Account</span></h2>
+        <h2 className="text-3xl text-center font-semibold mb-10"><span className="text-red-600">Log In</span> to Your Account</h2>
         <form onSubmit={handleSignIn}  className="w-11/12 md:w-1/2 bg-white py-8 flex flex-col justify-center items-center border shadow-md mx-auto min-h-[350px]">
         <div className="md:w-1/2">
         <label className="text-lg mb-2 font-semibold" htmlFor="email">Email Address:</label><br />
@@ -54,6 +53,7 @@ const Login = () => {
         <label className="text-lg mb-2 font-semibold" htmlFor="password">Password:</label><br />
         <input className="p-2 w-full bg-slate-50 border outline-none" type="password" placeholder="Password" name="password" />
         </div>
+        <div className="text-slate-500 md:w-1/2 mt-2"><Link to='/forget-password'>Forget Password</Link></div>
         <div className="md:w-1/2">
         <button className="bg-gray-700 w-full font-semibold px-5 py-3 mt-8 text-white">Log In</button>
         {

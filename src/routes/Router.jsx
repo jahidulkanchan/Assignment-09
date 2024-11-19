@@ -8,6 +8,7 @@ import PrivateProfile from "../privateRoutes/PrivateProfile";
 import Brands from "../pages/Brands";
 import BrandDetails from "../pages/BrandDetails";
 import PrivateRoute from "../privateRoutes/PrivateRoute";
+import ForgetPassword from "../pages/ForgetPassword";
 
 
 export const router = createBrowserRouter([
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
         path: '/brand/:id',
         loader: ()=> fetch('/coupon.json'),
         element: <PrivateProfile><BrandDetails/></PrivateProfile>
+      },
+      {
+        path: '/forget-password',
+        element: <ForgetPassword/>
       }
     ],
     errorElement: <div className="min-h-screen text-xl flex flex-col justify-center items-center">
