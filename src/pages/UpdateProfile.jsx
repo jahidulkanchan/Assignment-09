@@ -27,7 +27,7 @@ const UpdateProfile = () => {
   }
   return (
     <> 
-       <section className="bg-slate-50 relative pb-20 mt-[110px] md:mt-[90px] min-h-[600px]">
+       <section className="bg-slate-50 relative pb-20 mt-[75px] md:mt-[93px] min-h-[600px]">
         <div className="cover h-[250px] md:min-h-[280px] flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
             <div className="user text-center mt-16 md:mt-10">
             <h1 className="text-2xl md:text-3xl text-white font-medium">Update Profile Information</h1>

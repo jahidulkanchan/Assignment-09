@@ -11,13 +11,13 @@ const Footer = () => {
         </div>
         <div className="flex space-x-6 mb-4">
           <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-xl hover:text-gray-400" />
+            <FaLinkedin className="text-xl hover:text-blue-500" />
           </a>
           <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-xl hover:text-gray-400" />
+            <FaGithub className="text-xl hover:text-blue-500" />
           </a>
           <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-xl hover:text-gray-400" />
+            <FaTwitter className="text-xl hover:text-blue-500" />
           </a>
         </div>
       </div>

@@ -21,7 +21,7 @@ const MyProfile = () => {
 
   return (
     <>
-      <section className="bg-slate-50 relative mt-[110px] md:mt-[90px] pb-20 min-h-[700px]">
+      <section className="bg-slate-50 relative mt-[75px] md:mt-[93px] pb-20 min-h-[700px]">
         <div className="cover h-[280px] md:min-h-[350px] flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
             <div className="user mt-20">
             <h1 className="text-2xl text-center md:text-3xl text-white font-medium">👋 Welcome Back, {displayName}!</h1>

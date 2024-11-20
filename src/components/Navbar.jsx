@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link className="logo flex items-center" to="/">
              <img className="h-[35px] md:h-[50px]" src={LogoIcon} alt="" />
               <h3 className="text-xl md:text-2xl font-semibold">
-                Coupon_<span className="text-blue-500">Kit</span>
+                Coupon_<span className="text-indigo-500">Kit</span>
               </h3>
             </Link>
           </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
                   <img className="w-[100px] p-5 md:p-0 bg-white border mb-2 md:mb-0 md:w-8" src={user?.photoURL} alt="" />
                   <p className="text-slate-800 font-light text-sm">{user?.email}</p>
                 </div>
-                <button onClick={handleSignOutUser} className="px-4 text-sm py-2 border border-sky-500 bg-gradient-to-r from-sky-500 to-indigo-500 text-white">Log Out</button>
+                <button onClick={handleSignOutUser} className="px-8 text-sm py-2 border border-sky-500 bg-gradient-to-r from-sky-500 to-indigo-500 text-white">Log Out</button>
               </div>
             ) : (
               <div className="flex gap-4 md:gap-8 font-semibold">
