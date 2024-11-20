@@ -1,8 +1,14 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Topic:
+### A Coupon Collecting Application 005
+### Project Name: Coupon_Kit
+### Live URL: https://basic-auth-6b749.web.app/
+### purpose: 
+The purpose of Coupon_Kit is to make saving money effortless for users by consolidating discount coupons from popular e-commerce stores in Bangladesh. With a single platform to browse and collect vouchers, Coupon_Kit ensures users can easily find the best deals, maximize discounts, and enjoy a seamless shopping experience.
+### Used npm packages:
+- react-router-dom
+- react-icons
+- react-slick
+- animate.css
+- react-hot-toast
+- react-stars
+- react-fast-marquee

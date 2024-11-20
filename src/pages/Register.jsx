@@ -51,12 +51,12 @@ const Register = () => {
   return (
     <>
     <section className="flex flex-col bg-slate-50 justify-center py-10 min-h-[90vh] items-center">
-    <h2 className="text-3xl text-center font-semibold mb-10"><span className="text-red-600">Register</span> to Get Started </h2>
+    <h2 className="text-3xl text-center font-semibold mb-10"><span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">Register</span> to Get Started </h2>
         <form
           onSubmit={handleSignUp}
           className="w-11/12 md:w-1/2 bg-white py-8 flex flex-col justify-center items-center border space-y-4 shadow-md mx-auto min-h-[350px]"
         >
-          <div className="md:w-1/2">
+          <div>
             <label className=" mb-2 font-semibold" htmlFor="name">
               Name:
             </label>
@@ -68,7 +68,7 @@ const Register = () => {
               name="name"
             />
           </div>
-          <div className="md:w-1/2">
+          <div>
             <label className=" mb-2 font-semibold" htmlFor="photo">
               Photo URL:
             </label>
@@ -79,7 +79,7 @@ const Register = () => {
               name="photo"
             />
           </div>
-          <div className="md:w-1/2">
+          <div>
             <label className=" mb-2 font-semibold" htmlFor="email">
               Email Address:
             </label>
@@ -90,7 +90,7 @@ const Register = () => {
               name="email"
             />
           </div>
-          <div className="md:w-1/2">
+          <div>
             <label className=" mb-2 font-semibold" htmlFor="password">
               Password:
             </label>
@@ -109,17 +109,17 @@ const Register = () => {
             </div>
            </div>
           </div>
-          <div className="md:w-1/2">
-            <button className="bg-gray-800 w-full  px-5 py-3 mt-2 text-white">
+          <div>
+            <button className="bg-gradient-to-r hover:shadow-lg duration-150 from-sky-500 to-indigo-500 w-full  px-5 py-3 mt-2 text-white">
               Register
             </button>
             <p className="mt-5 text-center text-slate-500">
               Already have an account please{" "}
-              <Link to="/login" className="text-violet-800">
+              <Link to="/login" className="text-sky-600">
                 Log In
               </Link>
             </p>
-            <div  onClick={handleSignGoogle} className="flex border w-fit  mx-auto px-5 py-2 shadow-2xl cursor-pointer bg-red-200 justify-center items-center gap-2 my-5">
+            <div  onClick={handleSignGoogle} className="flex text-white border w-fit  mx-auto px-5 py-2 shadow-2xl cursor-pointer bg-gradient-to-r from-sky-500 to-indigo-500 justify-center items-center gap-2 my-5">
           <FaGoogle />
           <p>Sign With Google</p>
         </div>
