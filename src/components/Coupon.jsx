@@ -11,11 +11,11 @@ const Coupon = ({ coupon, singleData }) => {
   const [copied, setCopied] = useState(false);
   return (
     <>
-      <div className="cart mt-5 shadow min-h-[200px] border p-5 flex flex-col">
+      <div className="cart bg-gray-50 mt-5 shadow min-h-[200px] border py-8 rounded-xl px-5 flex flex-col">
         <img
-          className="w-28 shadow-2xl shadow-indigo-500 animate__animated animate__pulse  animate__infinite mx-auto h-28 border p-3 border-blue-300 mb-2"
+          className="w-28 shadow-2xl bg-white shadow-indigo-500 animate__animated animate__pulse  animate__infinite mx-auto h-28 border p-3 border-blue-300 mb-2"
           src={brand_logo}
-          alt=""
+          alt="Logo"
         />
         <h2 className="text-xl text-blue-600 mt-5 mb-2 md:text-2xl font-semibold">{description}</h2>
         <p><b>Type:</b> <span className="text-slate-500">{coupon_type}</span></p>

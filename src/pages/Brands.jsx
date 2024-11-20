@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
+import { LiaSearchSolid } from "react-icons/lia";
 const Brands = () => {
   const { brands, loading } = useContext(AuthContext);
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,20 +20,21 @@ const Brands = () => {
   );
 
   return (
-    <div className="container mx-auto min-h-[60vh] pt-[100px] mt-[50px] p-5">
-      <h2 className="text-3xl text-center font-semibold mb-10">
-        <span className="bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">The Best Brands, </span> 
-        All in One Place
+    <div className="container mx-auto min-h-[60vh] pt-[100px]  md:mt-[50px] p-5">
+      <h2 className="text-3xl px-9 sm:px-0 text-center font-semibold mb-5 md:mb-10">
+        <span className="bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">The best Brands, </span> 
+        all in one place
       </h2>
 
-      <div className="w-10/12  md:w-1/2 mx-auto">
+      <div className="w-10/12 relative md:w-1/2 mx-auto">
         <input
           type="text"
-          placeholder="Choose brand"
+          placeholder="Search Brand"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="border p-2 shadow w-full mb-10 rounded"
+          className="border outline-blue-200 p-2 shadow w-full mb-10 rounded"
         />
+        <div className="absolute top-3 text-blue-600 text-lg md:text-xl right-3"><LiaSearchSolid /></div>
       </div>
 
       <div className="grid grid-cols-1  md:w-10/12 mx-auto gap-7">

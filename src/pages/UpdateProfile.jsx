@@ -34,7 +34,7 @@ const UpdateProfile = () => {
             <p className="text-slate-100 px-3 mt-1 md:mt-3 md:w-2/3 mx-auto">Update your profile with a new name and photo to personalize your account. Make sure your details reflect who you are for a more personalized experience!</p>
             </div>
         </div>
-        <form onSubmit={updateProfileData} className="profile-card flex flex-col justify-center items-center w-[350px] sm:w-6/12 mx-auto absolute bottom-4 md:bottom-28 left-0 right-0 bg-white shadow-2xl min-h-[300px]">
+        <form onSubmit={updateProfileData} className="profile-card flex flex-col justify-center items-center w-[350px] sm:w-6/12 mx-auto absolute bottom-4 md:bottom-28 left-0 right-0 bg-white shadow-2xl shadow-indigo-500 min-h-[300px]">
          <div className="grid gap-5 grid-cols-1">
           <div>
               <label className=" mb-2 font-semibold" htmlFor="name">
@@ -62,7 +62,7 @@ const UpdateProfile = () => {
               />
           </div>
          </div>
-          <button className="px-5 py-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white mt-8">Update Now</button>
+          <button className="px-5 py-2 bg-gradient-to-r from-sky-500 to-indigo-500 hover:to-blue-500 text-white mt-8">Update Now</button>
         </form>
       </section>
     </>
