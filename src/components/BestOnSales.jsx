@@ -9,7 +9,7 @@ const BestOnSales = () => {
       <section className="px-5 pb-20">
         <div className="text-center">
           <h2 className="text-3xl font-semibold mb-2">
-            Best On <span className="text-red-600">Sales</span>
+            Best <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">On Sales</span>
           </h2>
           <p className="text-slate-500 md:w-4/6 mx-auto">
             Find the best deals from your favorite top brands in one place. Shop
@@ -21,7 +21,7 @@ const BestOnSales = () => {
         <div className="grid grid-cols-1 gap-8 mt-5 justify-center items-center sm:grid-cols-2 lg:grid-cols-3">
           {isSalesOn.map((brand, index) => {
             return (
-              <div className="card bg-slate-50 border border-transparent hover:border-slate-200 rounded-lg overflow-hidden hover:bg-white duration-200 pt-5 shadow" key={index}>
+              <div className="card bg-gray-50 border border-transparent hover:border-slate-200 rounded-lg overflow-hidden hover:bg-white duration-200 pt-5 shadow" key={index}>
                 <img className="w-[120px] mx-auto h-[100px]" src={brand.brand_logo} alt="" />
                 <div className="flex flex-col items-start md:flex-row bg-white p-5 mt-4 justify-between md:items-end">
                   <div>

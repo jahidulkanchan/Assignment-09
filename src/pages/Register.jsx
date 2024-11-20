@@ -50,7 +50,7 @@ const Register = () => {
   }
   return (
     <>
-    <section className="flex flex-col bg-slate-50 justify-center py-10 min-h-[90vh] items-center">
+    <section className="flex flex-col bg-slate-50 justify-center pt-[80px] mt-[50px] py-10 min-h-[90vh] items-center">
     <h2 className="text-3xl text-center font-semibold mb-10"><span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">Register</span> to Get Started </h2>
         <form
           onSubmit={handleSignUp}

@@ -7,7 +7,7 @@ const Footer = () => {
       
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         <div className="mb-4">
-          <p className="text-sm text-center">&copy; 2024 <Link to='/' className='bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent font-semibold'>Coupon_Kit</Link> All rights reserved.</p>
+          <p className="text-sm text-center">&copy; 2024 <Link to='/' className='bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent font-semibold'>Coupon_Kit</Link> All Rights Reserved. | Design by JK</p>
         </div>
         <div className="flex space-x-6 mb-4">
           <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">

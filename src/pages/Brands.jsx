@@ -19,7 +19,7 @@ const Brands = () => {
   );
 
   return (
-    <div className="container mx-auto mt-10 p-5">
+    <div className="container mx-auto min-h-[60vh] pt-[100px] mt-[50px] p-5">
       <h2 className="text-3xl text-center font-semibold mb-10">
         <span className="bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">The Best Brands, </span> 
         All in One Place
@@ -39,7 +39,7 @@ const Brands = () => {
         {filteredBrands.map((brand) => (
           <div
             key={brand._id}
-            className="border border-gray-100 bg-slate-50  relative p-4 rounded-lg shadow hover:shadow-lg transition-all"
+            className="border bg-gray-50  relative p-4 rounded-lg shadow hover:shadow-lg transition-all"
           >
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex flex-col items-center mb-4">
@@ -73,14 +73,14 @@ const Brands = () => {
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
-                className="bg-red-200 duration-200 hover:bg-red-300  shadow-sm font-semibold px-4 py-2 rounded mb-2"
+                className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white  hover:to-sky-500 shadow-sm font-semibold px-4 py-2 rounded mb-2"
               >
                 View Coupons
               </Link>
             </div>
 
             {brand.isSaleOn && (
-              <div className="text-blue-600 text-right absolute  right-3 top-2 font-bold text-xl animate__animated animate__tada  animate__infinite">
+              <div className="text-red-500 text-right absolute  right-3 top-2 font-bold text-xl md:text-2xl animate__animated animate__tada  animate__infinite">
                 Sale is on!
               </div>
             )}

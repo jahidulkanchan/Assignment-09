@@ -6,14 +6,14 @@ const Favourite = () => {
       <section className="px-5 pb-8">
       <div className="text-center">
           <h2 className="text-3xl font-semibold mb-2">
-            Favourite <span className="text-red-600">Categories</span>
+            Favourite <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">Categories</span>
           </h2>
           <p className="text-slate-500 md:w-4/6 mx-auto">
           My favourite categories span technology, design, and personal growth, each inspiring curiosity and creativity while helping me grow both personally and professionally.
           </p>
         </div><br />
         <div className="grid gap-6 mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="cart overflow-hidden shadow-md border pb-4">
+          <div className="cart  overflow-hidden shadow-md border pb-4">
             <img className="hover:scale-110 duration-200" src="https://t3.ftcdn.net/jpg/02/57/16/84/360_F_257168460_AwhicdEIavp7bdCbHXyTaBTHnBoBcZad.jpg" alt="" />
             <p className="mt-3 text-xl text-center">Electronics</p>
           </div>

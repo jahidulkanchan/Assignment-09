@@ -11,9 +11,9 @@ const Coupon = ({ coupon, singleData }) => {
   const [copied, setCopied] = useState(false);
   return (
     <>
-      <div className="cart mt-5 shadow min-h-[200px] border p-3 flex flex-col">
+      <div className="cart mt-5 shadow min-h-[200px] border p-5 flex flex-col">
         <img
-          className="w-28 shadow-2xl animate__animated animate__pulse  animate__infinite mx-auto h-28 border p-3 border-black mb-2"
+          className="w-28 shadow-2xl shadow-indigo-500 animate__animated animate__pulse  animate__infinite mx-auto h-28 border p-3 border-blue-300 mb-2"
           src={brand_logo}
           alt=""
         />
@@ -23,14 +23,14 @@ const Coupon = ({ coupon, singleData }) => {
         <p><b>Expire Date:</b> <span className="text-slate-500">{expiry_date}</span></p>
         <div className="flex-grow"></div>
         <div className="flex justify-between">
-          <Link to={shop_link} className="bg-slate-100 hover:bg-white mt-4 border border-black font-semibold px-5 py-2 w-fit">
+          <Link to={shop_link} className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white hover:to-sky-500 mt-4 border font-semibold px-5 py-2 w-fit">
             Use Now
           </Link>
           <CopyToClipboard text={coupon_code} onCopy={() => {
             setCopied(!copied);
             toast.success('Coupon copied successfully')
           }}>
-            <button className="mt-4 text-blue-600 hover:bg-slate-100 border border-black font-semibold px-5 py-2 w-fit">
+            <button className="mt-4 text-blue-600 hover:bg-slate-100 border border-slate-300 font-semibold px-5 py-2 w-fit">
               Copy Code
             </button>
           </CopyToClipboard>

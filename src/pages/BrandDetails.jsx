@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import ReactStars from "react-stars";
 import Coupon from "../components/Coupon";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import bigSale from '../assets/bigSale.png'
 
 const BrandDetails = () => {
   const navigate = useNavigate();
@@ -14,9 +15,9 @@ const BrandDetails = () => {
     <>
       <section className="min-h-[90vh] my-10 px-5">
         <h2 className="text-3xl text-center py-5 font-semibold">
-          <span className="text-red-600">Top Deals</span> For You
+          <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">Top Deals</span> For You
         </h2>
-        <div className="brand-details bg-slate-50 relative flex flex-col md:flex-row items-center justify-evenly shadow-md mx-auto border p-5 my-5  md:w-4/6 lg:w-1/2">
+        <div className="brand-details bg-gray-50 relative flex flex-col md:flex-row items-center justify-evenly shadow-md mx-auto border p-5 my-5  md:w-4/6 lg:w-1/2">
           <div>
             <img
               className="p-5 h-[200px] max-w-[350px]"
@@ -26,7 +27,7 @@ const BrandDetails = () => {
             <button
               className="text-2xl hover:text-blue-600 absolute left-5 bottom-4"
               onClick={() => {
-                navigate('/');
+                navigate('/brands');
                 window.scrollTo(0, 0);
               }}
             >
@@ -39,8 +40,8 @@ const BrandDetails = () => {
             <ReactStars count={5} size={24} value={rating} color2={"#ffd700"} />
           </div>
           {isSaleOn && (
-            <p className="text-blue-600 text-lg absolute right-2 animate__animated animate__shakeY  animate__delay-500ms top-1 font-semibold">
-              Sale is on
+            <p className="text-blue-600 text-lg absolute  animate__animated animate__shakeY  animate__delay-500ms -top-5 -right-10 font-semibold">
+              <img className="w-[150px]" src={bigSale} alt="" />
             </p>
           )}
         </div>
