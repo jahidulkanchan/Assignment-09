@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { auth } from "../firebaseAuth/firebase.init";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const ForgetPassword = () => {
   const { signOutUser } = useContext(AuthContext);
@@ -24,6 +25,9 @@ const ForgetPassword = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Coupon_kit | Reset Password</title>
+      </Helmet>
       <section className="flex flex-col pb-10 bg-slate-50 justify-center pt-[80px] mt-[50px] min-h-[50vh] items-center">
         <h2 className="text-3xl text-center font-semibold mb-10">
           <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">

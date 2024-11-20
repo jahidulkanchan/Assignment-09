@@ -93,7 +93,7 @@ const Navbar = () => {
                 <div className="flex justify-center flex-col items-center">
                   <img className="w-[100px] p-5 md:p-0 bg-white border mb-2 md:mb-0 md:w-8" src={user?.photoURL} alt="" />
                   <p className="text-slate-800 font-light text-sm">{user?.email}</p>
-                  <div onClick={()=> setIsHidden(true)} className="absolute top-5 border text-xl cursor-pointer md:text-2xl bg-white hover:bg-slate-200 right-5"><RxCross1 /></div>
+                  <div onClick={()=> setIsHidden(true)} className="absolute md:hidden top-5 border text-xl cursor-pointer md:text-2xl bg-white hover:bg-slate-200 right-5"><RxCross1 /></div>
                 </div>
                 <button onClick={handleSignOutUser} className="px-8 text-sm py-2 border border-sky-500 bg-gradient-to-r from-sky-500 to-indigo-500 text-white">Log Out</button>
               </div>

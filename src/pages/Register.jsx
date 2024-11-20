@@ -3,6 +3,7 @@ import { AuthContext } from "../authProvider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -52,6 +53,9 @@ const Register = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Coupon_kit | Register</title>
+      </Helmet>
       <section className="flex flex-col bg-slate-50 justify-center pt-[50px] mt-[50px] min-h-[700px] sm:min-h-[600px] items-center">
         <h2 className="text-3xl text-center font-semibold mb-10">
           <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">

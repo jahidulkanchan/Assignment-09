@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { Helmet } from "react-helmet";
 const MyProfile = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -21,6 +22,9 @@ const MyProfile = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Coupon_kit | Profile</title>
+      </Helmet>
       <section className="bg-slate-50 relative mt-[75px] md:mt-[93px] pb-20 min-h-[700px]">
         <div className="cover h-[280px] md:min-h-[350px] flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
             <div className="user mt-20">

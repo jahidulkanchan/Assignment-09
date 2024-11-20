@@ -3,6 +3,7 @@ import { AuthContext } from "../authProvider/AuthProvider";
 import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
 import { LiaSearchSolid } from "react-icons/lia";
+import { Helmet } from "react-helmet";
 const Brands = () => {
   const { brands, loading } = useContext(AuthContext);
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,6 +21,10 @@ const Brands = () => {
   );
 
   return (
+    <>
+    <Helmet>
+        <title>Coupon_kit | Brands</title>
+      </Helmet>
     <div className="container mx-auto min-h-[60vh] pt-[100px]  md:mt-[50px] p-5">
       <h2 className="text-3xl px-9 sm:px-0 text-center font-semibold mb-5 md:mb-10">
         <span className="bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">The best Brands, </span> 
@@ -92,6 +97,7 @@ const Brands = () => {
       <br />
       <br />
     </div>
+    </>
   );
 };
 

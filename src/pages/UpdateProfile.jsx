@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
   const navigate = useNavigate()
@@ -27,6 +28,9 @@ const UpdateProfile = () => {
   }
   return (
     <> 
+      <Helmet>
+        <title>Coupon_kit | Update Profile</title>
+      </Helmet>
        <section className="bg-slate-50 relative pb-20 mt-[75px] md:mt-[93px] min-h-[600px]">
         <div className="cover h-[250px] md:min-h-[280px] flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
             <div className="user text-center mt-16 md:mt-10">

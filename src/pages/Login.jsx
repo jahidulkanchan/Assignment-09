@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInUser, signWithGoogle, setUser } = useContext(AuthContext);
@@ -42,6 +43,9 @@ const Login = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Coupon_Kit | Login</title>
+      </Helmet>
       <section className="flex flex-col pb-10 pt-[80px] mt-[50px] bg-slate-50 justify-center min-h-[600px] items-center">
         <h2 className="text-3xl text-center font-semibold mb-10">
           <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
@@ -80,17 +84,27 @@ const Login = () => {
             </div>
           </div>
           <div>
-          <button className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:shadow-lg duration-150 w-full font-semibold px-5 py-3 mt-8 text-white">Log In</button>
+            <button className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:shadow-lg duration-150 w-full font-semibold px-5 py-3 mt-8 text-white">
+              Log In
+            </button>
             {errorMessage && (
               <p className="text-red-500 mt-2">
                 Something is wrong! <br /> please use correct email or password
               </p>
             )}
-            <p className="mt-5 text-center text-slate-700">If you have not an account please  <Link to='/register' className="text-violet-800">Register</Link></p>
-            <div  onClick={handleSignGoogle} className="flex text-white border w-fit  mx-auto px-5 py-2 shadow-2xl cursor-pointer bg-gradient-to-r from-sky-500 to-indigo-500 justify-center items-center gap-2 my-5">
-            <FaGoogle />
-            <p>Sign With Google</p>
-          </div>
+            <p className="mt-5 text-center text-slate-700">
+              If you have not an account please{" "}
+              <Link to="/register" className="text-violet-800">
+                Register
+              </Link>
+            </p>
+            <div
+              onClick={handleSignGoogle}
+              className="flex text-white border w-fit  mx-auto px-5 py-2 shadow-2xl cursor-pointer bg-gradient-to-r from-sky-500 to-indigo-500 justify-center items-center gap-2 my-5"
+            >
+              <FaGoogle />
+              <p>Sign With Google</p>
+            </div>
           </div>
         </form>
       </section>

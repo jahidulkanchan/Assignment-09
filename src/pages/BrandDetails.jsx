@@ -3,6 +3,7 @@ import ReactStars from "react-stars";
 import Coupon from "../components/Coupon";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import bigSale from '../assets/bigSale.png'
+import { Helmet } from "react-helmet";
 
 const BrandDetails = () => {
   const navigate = useNavigate();
@@ -13,6 +14,9 @@ const BrandDetails = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Coupon_kit | Brand Details</title>
+      </Helmet>
       <section className="min-h-[90vh] pt-[80px] md:pt-[100px] md:mt-[20px] mb-10 px-5">
         <h2 className="text-3xl text-center py-5 font-semibold">
           <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">Top Deals</span> For You
