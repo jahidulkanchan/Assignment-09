@@ -22,12 +22,12 @@ const MyProfile = () => {
   return (
     <>
       <section className="bg-slate-50 relative mt-[110px] md:mt-[90px] pb-20 min-h-[700px]">
-        <div className="cover h-[300px] md:min-h-[350px] flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
+        <div className="cover h-[280px] md:min-h-[350px] flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
             <div className="user mt-20">
             <h1 className="text-2xl text-center md:text-3xl text-white font-medium">👋 Welcome Back, {displayName}!</h1>
             </div>
         </div>
-        <div className="profile-card flex flex-col justify-center items-center w-[350px] md:max-w-[400px] mx-auto absolute top-[200px] h-fit  md:bottom-5 left-0 right-0 bg-white shadow-2xl shadow-indigo-500 min-h-[400px]">
+        <div className="profile-card flex flex-col justify-center items-center w-11/12 sm:w-8/12 md:w-6/12 mx-auto absolute top-[170px] h-fit  md:bottom-5 left-0 right-0 bg-white shadow-2xl shadow-indigo-500 min-h-[400px]">
             <img className="w-[150px] ring ring-blue-500  border h-[150px] rounded-full" src={photoURL} alt="" /><br />
             <h2 className="text-xl"><span>User Name:</span> <span className="text-slate-500">{displayName}</span></h2>
             <h2><span >User Email:</span> <span className="text-slate-500">{email}</span></h2>

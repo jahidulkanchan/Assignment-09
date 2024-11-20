@@ -13,7 +13,7 @@ const BrandDetails = () => {
 
   return (
     <>
-      <section className="min-h-[90vh] my-10 px-5">
+      <section className="min-h-[90vh] pt-[70px] mt-[50px] mb-10 px-5">
         <h2 className="text-3xl text-center py-5 font-semibold">
           <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">Top Deals</span> For You
         </h2>
@@ -40,7 +40,7 @@ const BrandDetails = () => {
             <ReactStars count={5} size={24} value={rating} color2={"#ffd700"} />
           </div>
           {isSaleOn && (
-            <p className="text-blue-600 text-lg absolute  animate__animated animate__shakeY  animate__delay-500ms -top-5 -right-10 font-semibold">
+            <p className="text-blue-600 text-lg absolute  animate__animated animate__shakeY  animate__delay-500ms -top-5 -right-5 md:-right-10 font-semibold">
               <img className="w-[150px]" src={bigSale} alt="" />
             </p>
           )}

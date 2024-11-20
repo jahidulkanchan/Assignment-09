@@ -36,7 +36,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="menu">
-            <ul className={`md:flex w-full text-center z-10 container bg-gray-50 py-4 md:py-0 md:bg-transparent left-0 right-0 mx-auto absolute md:static flex-col justify-center md:flex-row gap-5 items-center ${user? 'top-[100px]' : 'top-[60px]'}  ${isShow? 'block' : 'hidden'}`}>
+            <ul className={`md:flex w-full text-center z-10 container bg-gray-50 py-4 md:py-0 md:bg-transparent left-0 right-0 mx-auto absolute md:static flex-col justify-center md:flex-row gap-5 items-center ${user? 'top-[110px]' : 'top-[60px]'}  ${isShow? 'block' : 'hidden'}`}>
               <li onClick={()=>{
                 setIsShow(!isShow)
               }}>
