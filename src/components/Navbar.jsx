@@ -6,12 +6,19 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import toast from "react-hot-toast";
 import { IoMdHome } from "react-icons/io";
 import { TbBrandAirtable } from "react-icons/tb";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaUserCircle } from "react-icons/fa";
+import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
   const [isShow, setIsShow] = useState(false)
+  const [isHidden, setIsHidden] = useState(true)
+  const handleToggleUser = ()=>{
+    setIsHidden(!isHidden)
+    setIsShow(false)
+  }
   const handleToggleBar = () => {
     setIsShow(!isShow)
+    setIsHidden(true)
   }
   const { user, signOutUser} = useContext(AuthContext);
   const handleSignOutUser = ()=>{
@@ -36,7 +43,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="menu">
-            <ul className={`md:flex w-full text-center z-10 container bg-gray-50 py-4 md:py-0 md:bg-transparent left-0 right-0 mx-auto absolute md:static flex-col justify-center md:flex-row gap-5 items-center ${user? 'top-[110px]' : 'top-[60px]'}  ${isShow? 'block' : 'hidden'}`}>
+            <ul className={`md:flex w-full text-center z-10 bg-slate-50 py-5 md:py-0 md:bg-transparent space-y-5 md:space-y-0 left-0 right-0 mx-auto absolute md:static flex-col justify-center md:flex-row gap-5 items-center top-[75px]  ${isShow? 'block' : 'hidden'}`}>
               <li onClick={()=>{
                 setIsShow(!isShow)
               }}>
@@ -77,24 +84,33 @@ const Navbar = () => {
               }
             </ul>
           </div>
+          {
+
+          }
           <div className="user-info">
             {user ? (
-              <div className="flex flex-col md:flex-row justify-center md:gap-4 items-center">
+              <div className={`flex-col bg-slate-50  md:bg-transparent absolute md:static w-full md:fit left-0 top-[75px] py-5 md:py-0 gap-5 md:flex-row justify-center md:gap-4 items-center ${!isHidden ? 'flex' : 'hidden md:flex'}`}>
                 <div className="flex justify-center flex-col items-center">
-                  <img className="w-6" src={user?.photoURL} alt="" />
+                  <img className="w-[100px] p-5 md:p-0 bg-white border mb-2 md:mb-0 md:w-8" src={user?.photoURL} alt="" />
                   <p className="text-slate-800 font-light text-sm">{user?.email}</p>
                 </div>
-                <button onClick={handleSignOutUser} className="px-4 text-sm py-1 md:py-2 border border-sky-500 bg-gradient-to-r from-sky-500 to-indigo-500 text-white">Log Out</button>
+                <button onClick={handleSignOutUser} className="px-4 text-sm py-2 border border-sky-500 bg-gradient-to-r from-sky-500 to-indigo-500 text-white">Log Out</button>
               </div>
             ) : (
-              <div className="flex gap-8 font-semibold">
+              <div className="flex gap-4 md:gap-8 font-semibold">
                 <Link to="/login">Log In</Link>
                 <Link to="/register">Register</Link>
               </div>
             )}
           </div>
-          <div onClick={handleToggleBar} className="bar-icon z-20 cursor-pointer block md:hidden text-xl">
-          <FaBarsStaggered />
+          <div className="bar-icon flex items-center gap-4  ml-1 z-20 cursor-pointer md:hidden text-xl">
+          {user && <div title="User info" onClick={handleToggleUser} className={`text-2xl inline-block md:hidden ${!isHidden? 'text-blue-500' : 'text-black'}`}>
+            <FaUserCircle />
+          </div>
+          }
+          <div onClick={handleToggleBar}>
+          {isShow? <RxCross1 />: <FaBarsStaggered />}
+          </div>
           </div>
         </nav>
       </section>
