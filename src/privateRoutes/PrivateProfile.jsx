@@ -7,7 +7,9 @@ const PrivateProfile = ({children}) => {
   const {user,loading} = useContext(AuthContext)
   const {pathname} = useLocation()
   if(loading){
-    return <p className="text-2xl flex justify-center items-center min-h-[90vh] font-semibold text-red-500">Loading...</p>
+    return <div className="bg-slate-50 flex justify-center items-center min-h-[85vh]">
+      <img className="w-10 md:w-14" src="/loading.gif" alt="" />
+    </div>
   }
   if(user){
     return children

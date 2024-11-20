@@ -3,9 +3,14 @@ import { AuthContext } from "../authProvider/AuthProvider";
 import { Link} from "react-router-dom";
 import ReactStars from "react-stars";
 const Brands = () => {
-  const { brands } = useContext(AuthContext);
+  const { brands , loading } = useContext(AuthContext);
   const [searchQuery, setSearchQuery] = useState("");
 
+  if(loading){
+    return <div className="bg-slate-50 flex justify-center items-center min-h-[85vh]">
+      <img className="w-10 md:w-14" src="/loading.gif" alt="" />
+    </div>
+  }
   // Search any items by name ====================
   const filteredBrands = brands.filter((brand) =>
     brand.brand_name.toLowerCase().includes(searchQuery.toLowerCase())

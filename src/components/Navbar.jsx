@@ -10,15 +10,15 @@ const Navbar = () => {
   const handleToggleBar = () => {
     setIsShow(!isShow)
   }
-  const { user, signOutUser,loading } = useContext(AuthContext);
+  const { user, signOutUser} = useContext(AuthContext);
   const handleSignOutUser = ()=>{
     signOutUser()
   }
-  useEffect(()=>{
-    if(!loading && user){
-      toast(`❤ Hey !! Welcome, ${user.displayName}`)
-    }
-  },[user,loading])
+  useEffect(() => {
+     if (user && user.displayName) {
+        toast(`❤ Hey !! Welcome, ${user.displayName}`);
+      }
+    },[user]);
   
   return (
     <>

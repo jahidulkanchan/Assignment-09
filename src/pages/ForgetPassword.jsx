@@ -1,10 +1,12 @@
 import { sendPasswordResetEmail } from "firebase/auth";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import toast from "react-hot-toast";
 import { auth } from "../firebaseAuth/firebase.init";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../authProvider/AuthProvider";
 
 const ForgetPassword = () => {
+  const {signOutUser} = useContext(AuthContext)
   const navigate = useNavigate()
   const emailRef = useRef()
   const handleForgetPassword = (e) => {
@@ -14,11 +16,11 @@ const ForgetPassword = () => {
       return toast.error('provide a valid email')
     }
     else{
-    
       sendPasswordResetEmail(auth, email)
       .then(()=>{
         toast.success('Reset email sent, Check your email')
         navigate('/login')
+        signOutUser()
       })
     }
   }

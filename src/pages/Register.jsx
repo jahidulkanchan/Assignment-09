@@ -4,8 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
+
 const Register = () => {
   const navigate = useNavigate()
+  const [errorMessage, setErrorMessage] = useState('')
   const [ishidden, setIsHidden]  = useState(true)
   const {signUpUser,updateUserProfile,signWithGoogle,setUser} = useContext(AuthContext)
     // Sign up with google ====================================
@@ -23,6 +25,11 @@ const Register = () => {
     const photo = e.target.photo.value
     const email = e.target.email.value
     const password = e.target.password.value
+    setErrorMessage('')
+    const regex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+    if (!regex.test(password)) {
+        return setErrorMessage('Password must have at least one uppercase letter, one lowercase letter, and at least 6 characters long');
+    }
     signUpUser(email, password)
     .then((result)=> {
       const user = result.user
@@ -94,9 +101,12 @@ const Register = () => {
               placeholder="Password"
               name="password"
             />
-            <button onClick={()=> setIsHidden(!ishidden)} className="absolute right-2 top-3">
+            {
+              errorMessage && <p className="text-red-600 text-sm">{errorMessage}</p>
+            }
+            <div onClick={()=> setIsHidden(!ishidden)} className="absolute cursor-pointer right-2 top-3">
               {ishidden ? <FaRegEye /> : <FaRegEyeSlash />}
-            </button>
+            </div>
            </div>
           </div>
           <div className="md:w-1/2">

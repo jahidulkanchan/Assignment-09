@@ -1,87 +1,120 @@
 [
   {
     "_id": "1f7a2b23-d441-4d4e-9dff-2b8aef341d34",
-    "brand_name": "Apple",
+    "brand_name": "Daraz",
     "rating": 4.5,
-    "description": "Discover amazing deals on the latest Apple products, from iPhones to MacBooks, and elevate your tech experience with premium quality.",
-    "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    "description": "Discover amazing deals on a wide range of products from Daraz, Bangladesh's leading e-commerce platform.",
+    "brand_logo": "https://logos-world.net/wp-content/uploads/2022/05/Daraz-Logo.png",
     "coupons": [
       {
-        "coupon_code": "APPLE20OFF",
-        "description": "Flat $20 off on your next purchase.",
+        "coupon_code": "DARAZ200",
+        "description": "Get ৳200 off on your next order.",
         "expiry_date": "2024-11-30",
-        "condition": "Applicable on orders above $100.",
+        "condition": "Applicable on orders above ৳2000.",
         "coupon_type": "fixed"
       },
       {
-        "coupon_code": "APPLEFREESHIP",
-        "description": "Free shipping on orders over $75.",
+        "coupon_code": "DARAZSHIPFREE",
+        "description": "Free shipping on orders over ৳1000.",
         "expiry_date": "2024-12-10",
-        "condition": "Applicable for online orders.",
+        "condition": "Applicable for online payments only.",
         "coupon_type": "free_shipping"
       }
     ],
-    "shop_link": "https://www.apple.com",
-    "category": "Electronics",
+    "shop_link": "https://www.daraz.com.bd",
+    "category": "E-commerce",
     "isSaleOn": true
   },
   {
     "_id": "c3f8d7f3-9b2c-4a30-a91f-2cdd8e13f001",
-    "brand_name": "H&M",
+    "brand_name": "Bata",
     "rating": 4.5,
-    "description": "Update your wardrobe with H&M’s trendy fashion pieces at discounted prices, perfect for every season and style.",
-    "brand_logo": "https://1000logos.net/wp-content/uploads/2017/02/Hennes-logo.jpg",
+    "description": "Find trendy and affordable footwear for all occasions with exclusive discounts from Bata Bangladesh.",
+    "brand_logo": "https://www.iid.org.in/basepath/thumbnail/franchise-brand/OOhaJYhMIrqF2J8BlHte9gdQ0r4scDEn9misA6Zk.png",
     "coupons": [
       {
-        "coupon_code": "HM15OFF",
+        "coupon_code": "BATA15OFF",
         "description": "15% off on your first order.",
         "expiry_date": "2024-11-29",
         "condition": "First-time customers only.",
         "coupon_type": "percentage"
       },
       {
-        "coupon_code": "HMFREESHIP",
+        "coupon_code": "BATAFREESHIP",
         "description": "Free shipping on all orders.",
         "expiry_date": "2024-12-15",
         "condition": "No minimum purchase required.",
         "coupon_type": "free_shipping"
       }
     ],
-    "shop_link": "https://www.hm.com",
+    "shop_link": "https://www.batabd.com",
     "category": "Fashion",
     "isSaleOn": false
   },
   {
-    "_id": "5c8f8e11-b6a9-4e32-94b8-56cccd0023d8",
-    "brand_name": "Nike",
-    "rating": 4.7,
-    "description": "Step up your game with Nike! Find exclusive discounts on footwear, apparel, and accessories for your active lifestyle.",
-    "brand_logo": "https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png",
+    "_id": "7f8a2c4b-d621-4a6e-a91b-3b9ef8e13c7f",
+    "brand_name": "Foodpanda",
+    "rating": 4.6,
+    "description": "Enjoy exclusive deals on food delivery and groceries with Foodpanda, your favorite online delivery platform.",
+    "brand_logo": "https://ph-test-11.slatic.net/p/9a66c3f38bcbb5940d790d9fd58855ee.png",
     "coupons": [
       {
-        "coupon_code": "NIKE15",
+        "coupon_code": "FP50OFF",
+        "description": "৳50 off on your first order.",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for new customers only.",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "FPFREEDEL",
+        "description": "Free delivery on orders above ৳200.",
+        "expiry_date": "2024-12-15",
+        "condition": "Applies to selected restaurants only.",
+        "coupon_type": "free_shipping"
+      },
+      {
+        "coupon_code": "FP150OFF",
+        "description": "৳150 off on grocery orders over ৳1000.",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid for grocery section only.",
+        "coupon_type": "fixed"
+      }
+    ],
+    "shop_link": "https://www.foodpanda.com.bd",
+    "category": "Food Delivery",
+    "isSaleOn": true
+  },
+  {
+    "_id": "5c8f8e11-b6a9-4e32-94b8-56cccd0023d8",
+    "brand_name": "Rangs Electronics",
+    "rating": 4.7,
+    "description": "Get the best deals on electronic appliances and gadgets with Rangs Electronics, a trusted name in Bangladesh.",
+    "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Rangs-Group-Logo.png",
+    "coupons": [
+      {
+        "coupon_code": "RANGS15",
         "description": "15% off on your first purchase.",
         "expiry_date": "2024-11-25",
         "condition": "First-time customers only.",
         "coupon_type": "percentage"
       },
       {
-        "coupon_code": "NIKEFREE",
-        "description": "Free shipping on orders over $50.",
+        "coupon_code": "RANGSFREE",
+        "description": "Free shipping on orders over ৳5000.",
         "expiry_date": "2024-12-01",
-        "condition": "No minimum purchase required.",
+        "condition": "Applicable for online orders only.",
         "coupon_type": "free_shipping"
       },
       {
-        "coupon_code": "NIKE30",
-        "description": "30% off on all footwear.",
+        "coupon_code": "RANGS30",
+        "description": "30% off on all home appliances.",
         "expiry_date": "2024-12-10",
-        "condition": "Valid on selected styles only.",
+        "condition": "Valid on selected items only.",
         "coupon_type": "percentage"
       }
     ],
-    "shop_link": "https://www.nike.com",
-    "category": "Fashion",
+    "shop_link": "https://www.rangs.com.bd",
+    "category": "Electronics",
     "isSaleOn": true
   },
   {
@@ -100,16 +133,16 @@
       },
       {
         "coupon_code": "AARONG50",
-        "description": "$50 off on orders over $200.",
+        "description": "৳500 off on orders over ৳5000.",
         "expiry_date": "2024-11-30",
-        "condition": "Orders over $200 only.",
+        "condition": "Orders over ৳5000 only.",
         "coupon_type": "fixed"
       },
       {
         "coupon_code": "AARONGFREESHIP",
         "description": "Free shipping on all home décor.",
         "expiry_date": "2024-12-05",
-        "condition": "Minimum order $30.",
+        "condition": "Minimum order ৳3000.",
         "coupon_type": "free_shipping"
       }
     ],
@@ -133,14 +166,14 @@
       },
       {
         "coupon_code": "BASHUNDHARAFREE",
-        "description": "Free dessert on orders above $30.",
+        "description": "Free dessert on orders above ৳3000.",
         "expiry_date": "2024-12-15",
-        "condition": "Orders above $30 only.",
+        "condition": "Orders above ৳3000 only.",
         "coupon_type": "free_product"
       },
       {
         "coupon_code": "BASHUNDHARA5OFF",
-        "description": "Flat $5 off on any grocery order.",
+        "description": "Flat ৳500 off on any grocery order.",
         "expiry_date": "2024-12-05",
         "condition": "No minimum purchase required.",
         "coupon_type": "fixed"
@@ -152,33 +185,6 @@
   },
   {
     "_id": "6b7a5d23-d91d-4a38-9e23-c8f64b01bcd8",
-    "brand_name": "Samsung",
-    "rating": 4.8,
-    "description": "Grab deals on Samsung’s innovative gadgets and appliances, from cutting-edge smartphones to high-tech TVs.",
-    "brand_logo": "https://cdn.vectorstock.com/i/500p/18/66/samsung-brand-logo-phone-symbol-blue-and-white-vector-46231866.jpg",
-    "coupons": [
-      {
-        "coupon_code": "SAMSUNG15",
-        "description": "15% off on all mobile devices.",
-        "expiry_date": "2024-12-05",
-        "condition": "Valid on mobile category only.",
-        "coupon_type": "percentage"
-      },
-      {
-        "coupon_code": "SAMSUNGBUNDLE",
-        "description": "Save $100 on combo packs.",
-        "expiry_date": "2024-12-15",
-        "condition": "Combo includes phone and smartwatch.",
-        "coupon_type": "fixed"
-      }
-    ],
-    "shop_link": "https://www.samsung.com",
-    "category": "Electronics",
-    "isSaleOn": true
-  },
-  
-  {
-    "_id": "b3f9d8f4-9f3f-4a21-b91f-9b2cdd8d03f7",
     "brand_name": "Walton",
     "rating": 4.6,
     "description": "Unlock discounts on Walton’s extensive lineup of electronics and home appliances, combining affordability with advanced technology.",
@@ -193,16 +199,16 @@
       },
       {
         "coupon_code": "WALTONFREESHIP",
-        "description": "Free shipping on orders over $50.",
+        "description": "Free shipping on orders over ৳5000.",
         "expiry_date": "2024-12-01",
-        "condition": "Orders above $50 only.",
+        "condition": "Orders above ৳5000 only.",
         "coupon_type": "free_shipping"
       },
       {
         "coupon_code": "WALTONCOMBO",
-        "description": "Get $25 off on combo purchases.",
+        "description": "Get ৳2500 off on combo purchases.",
         "expiry_date": "2024-12-20",
-        "condition": "Minimum $100 combo purchase.",
+        "condition": "Minimum ৳10,000 combo purchase.",
         "coupon_type": "fixed"
       }
     ],
@@ -236,6 +242,8 @@
     "category": "Electronics",
     "isSaleOn": true
   }
+  
 ]
+
 
 
