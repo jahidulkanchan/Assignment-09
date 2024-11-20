@@ -9,6 +9,7 @@ import Brands from "../pages/Brands";
 import BrandDetails from "../pages/BrandDetails";
 import PrivateRoute from "../privateRoutes/PrivateRoute";
 import ForgetPassword from "../pages/ForgetPassword";
+import UpdateProfile from "../pages/UpdateProfile";
 
 
 export const router = createBrowserRouter([
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path: '/forget-password',
         element: <ForgetPassword/>
+      },
+      {
+        path: '/update-profile',
+        element: <UpdateProfile/>
       }
     ],
     errorElement: <div className="min-h-screen text-xl flex flex-col justify-center items-center">

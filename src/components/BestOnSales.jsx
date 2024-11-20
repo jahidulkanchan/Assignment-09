@@ -26,9 +26,9 @@ const BestOnSales = () => {
                 <div className="flex flex-col items-start md:flex-row bg-white p-5 mt-4 justify-between md:items-end">
                   <div>
                   <h3 className="text-2xl font-semibold mb-2">{brand.brand_name}</h3>
-                  <p className="text-slate-500">Total Coupons: <span className="text-red-500 font-semibold">{brand.coupons.length}</span></p>
+                  <p className="text-slate-500">Total Coupons: <span className="text-blue-600 font-semibold">{brand.coupons.length}</span></p>
                   </div>
-                  <p className="text-slate-500">Category: <span className="text-red-500 font-semibold">{brand.category}</span></p>
+                  <p className="text-slate-500">Category: <span className="text-blue-600 font-semibold">{brand.category}</span></p>
                 </div>
               </div>
             )

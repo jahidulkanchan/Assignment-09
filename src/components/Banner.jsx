@@ -19,7 +19,7 @@ const Banner = () => {
   };
   return (
     <>
-      <section className="px-5 py-10 bg-slate-50">
+      <section className="px-5 py-10 bg-gradient-to-r from-sky-500 to-indigo-500">
       <Slider className="w-11/12 md:w-4/5  mx-auto" {...settings}>
       <div>
         <img className="w-11/12 shadow-xl mb-10 h-[200px] md:h-[300px] mx-auto" src={Slide1} alt="" />

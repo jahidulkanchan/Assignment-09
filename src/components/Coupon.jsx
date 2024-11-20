@@ -17,7 +17,7 @@ const Coupon = ({ coupon, singleData }) => {
           src={brand_logo}
           alt=""
         />
-        <h2 className="text-xl text-red-600 mt-5 mb-2 md:text-2xl font-semibold">{description}</h2>
+        <h2 className="text-xl text-blue-600 mt-5 mb-2 md:text-2xl font-semibold">{description}</h2>
         <p><b>Type:</b> <span className="text-slate-500">{coupon_type}</span></p>
         <p><b>Condition:</b> <span className="text-slate-500">{condition}</span></p>
         <p><b>Expire Date:</b> <span className="text-slate-500">{expiry_date}</span></p>
@@ -30,7 +30,7 @@ const Coupon = ({ coupon, singleData }) => {
             setCopied(!copied);
             toast.success('Coupon copied successfully')
           }}>
-            <button className="mt-4 text-red-500 hover:bg-slate-100 border border-black font-semibold px-5 py-2 w-fit">
+            <button className="mt-4 text-blue-600 hover:bg-slate-100 border border-black font-semibold px-5 py-2 w-fit">
               Copy Code
             </button>
           </CopyToClipboard>

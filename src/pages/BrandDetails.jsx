@@ -24,7 +24,7 @@ const BrandDetails = () => {
               alt=""
             />
             <button
-              className="text-2xl hover:text-red-500 absolute left-5 bottom-4"
+              className="text-2xl hover:text-blue-600 absolute left-5 bottom-4"
               onClick={() => {
                 navigate('/');
                 window.scrollTo(0, 0);
@@ -39,7 +39,7 @@ const BrandDetails = () => {
             <ReactStars count={5} size={24} value={rating} color2={"#ffd700"} />
           </div>
           {isSaleOn && (
-            <p className="text-red-500 text-lg absolute right-2 animate__animated animate__shakeY  animate__delay-500ms top-1 font-semibold">
+            <p className="text-blue-600 text-lg absolute right-2 animate__animated animate__shakeY  animate__delay-500ms top-1 font-semibold">
               Sale is on
             </p>
           )}

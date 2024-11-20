@@ -1,9 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
-import LogoIcon from "../assets/logo.png";
+import LogoIcon from "../assets/logo.svg";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { FaBarsStaggered } from "react-icons/fa6";
 import toast from "react-hot-toast";
+import { IoMdHome } from "react-icons/io";
+import { TbBrandAirtable } from "react-icons/tb";
+import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   const [isShow, setIsShow] = useState(false)
@@ -26,10 +29,10 @@ const Navbar = () => {
   
         <nav className="flex justify-between items-center">
           <div>
-            <Link className="logo flex gap-2 items-center" to="/">
+            <Link className="logo flex items-center" to="/">
              <img className="h-[35px] md:h-[50px]" src={LogoIcon} alt="" />
               <h3 className="text-xl md:text-2xl font-semibold">
-                Coupon_<span className="text-red-600">Kit</span>
+                Coupon_<span className="text-blue-500">Kit</span>
               </h3>
             </Link>
           </div>
@@ -40,11 +43,11 @@ const Navbar = () => {
               }}>
                 <NavLink
                   className={({ isActive }) =>
-                    `${isActive ? "text-red-600" : ""}`
+                    `${isActive ? "text-blue-600" : ""} flex justify-center items-center gap-1`
                   }
                   to="/"
                 >
-                  Home
+                  <IoMdHome /> Home
                 </NavLink>
               </li>
               <li onClick={()=>{
@@ -52,11 +55,11 @@ const Navbar = () => {
               }}>
                 <NavLink
                   className={({ isActive }) =>
-                    `${isActive ? "text-red-600" : ""}`
+                    `${isActive ? "text-blue-600" : ""} flex justify-center items-center gap-1`
                   }
                   to="/brands"
                 >
-                  Brands
+                 <TbBrandAirtable /> Brands
                 </NavLink>
               </li>
               {
@@ -65,11 +68,11 @@ const Navbar = () => {
                 }}>
                 <NavLink
                   className={({ isActive }) =>
-                    `${isActive ? "text-red-600" : ""}`
+                    `${isActive ? "text-blue-600" : ""} flex justify-center items-center gap-1`
                   }
                   to="/my-profile"
                 >
-                  My Profile
+                 <FaUser /> My Profile
                 </NavLink>
               </li>
               }
