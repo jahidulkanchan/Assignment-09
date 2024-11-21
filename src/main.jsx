@@ -8,9 +8,6 @@ import 'animate.css';
 import { Toaster } from 'react-hot-toast';
 import { HelmetProvider } from "react-helmet-async";
 
-
-
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>

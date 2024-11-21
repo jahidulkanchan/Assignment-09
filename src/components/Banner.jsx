@@ -23,16 +23,16 @@ const Banner = () => {
       <section className="px-5 pt-[100px] mt-[20px] md:mt-[20px] py-10">
       <Slider className="w-full  mx-auto" {...settings}>
       <div>
-        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide1} alt="" />
+        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide1} alt="Slide_Banner" />
       </div>
       <div>
-        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide2} alt="" />
+        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide2} alt="Slide_Banner" />
       </div>
       <div>
-        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide3} alt="" />
+        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide3} alt="Slide_Banner" />
       </div>
       <div>
-        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide4} alt="" />
+        <img className="w-full md:w-11/12 shadow md:shadow-xl mb-10 h-[200px] md:h-[370px] mx-auto" src={Slide4} alt="Slide_Banner" />
       </div>
      
     </Slider>

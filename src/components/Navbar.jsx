@@ -46,6 +46,7 @@ const Navbar = () => {
             <ul className={`md:flex w-full text-center z-10 bg-slate-50 py-5 md:py-0 md:bg-transparent space-y-5 md:space-y-0 left-0 right-0 mx-auto absolute md:static flex-col justify-center md:flex-row gap-5 items-center top-[75px]  ${isShow? 'block' : 'hidden'}`}>
               <li onClick={()=>{
                 setIsShow(!isShow)
+                window.scrollTo(0,0)
               }}>
                 <NavLink
                   className={({ isActive }) =>
@@ -58,6 +59,7 @@ const Navbar = () => {
               </li>
               <li onClick={()=>{
                 setIsShow(!isShow)
+                window.scrollTo(0,0)
               }}>
                 <NavLink
                   className={({ isActive }) =>
@@ -69,11 +71,14 @@ const Navbar = () => {
                 </NavLink>
               </li>
               {
-                user && <li onClick={()=>{
+                user && <li
+                onClick={()=>{
                   setIsShow(!isShow)
-                }}>
+                  window.scrollTo(0,0)
+                }}
+                >
                 <NavLink
-                  className={({ isActive }) =>
+                   className={({ isActive }) =>
                     `${isActive ? "text-blue-600" : ""} flex justify-center items-center gap-1`
                   }
                   to="/my-profile"
@@ -89,7 +94,7 @@ const Navbar = () => {
           }
           <div className="user-info">
             {user ? (
-              <div className={`flex-col bg-slate-50  md:bg-transparent absolute md:static w-full md:fit left-0 top-[75px] py-5 md:py-0 gap-5 md:flex-row justify-center md:gap-4 items-center ${!isHidden ? 'flex' : 'hidden md:flex'}`}>
+              <div className={`flex-col bg-slate-50 md:bg-transparent absolute md:static w-full md:fit left-0 top-[75px] py-5 md:py-0 gap-5 md:flex-row justify-center md:gap-4 items-center ${!isHidden ? 'flex' : 'hidden md:flex'}`}>
                 <div className="flex justify-center flex-col items-center">
                   <img className="w-[100px] p-5 md:p-0 bg-white border mb-2 md:mb-0 md:w-8" src={user?.photoURL} alt="" />
                   <p className="text-slate-800 font-light text-sm">{user?.email}</p>

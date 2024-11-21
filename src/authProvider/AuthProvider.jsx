@@ -60,9 +60,9 @@ const AuthProvider = ({ children }) => {
   const [brands, setBrands] = useState([])
   useEffect(()=>{
     const fetchBrands = async () => {
-      const res = await fetch('/coupon.json'); // Fetch the JSON file
-      const brandData = await res.json(); // Parse the JSON response
-      setBrands(brandData); // Update the state with the fetched data
+      const res = await fetch('/coupon.json'); 
+      const brandData = await res.json(); 
+      setBrands(brandData); 
     };
     fetchBrands();
   },[])

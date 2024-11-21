@@ -35,6 +35,7 @@ const Login = () => {
           setUser(user);
           navigate(location?.state ? location.state : "/");
           e.target.reset();
+          window.scrollTo(0,0)
         }
       })
       .catch((err) => {

@@ -33,12 +33,12 @@ const UpdateProfile = () => {
       </Helmet>
        <section className="bg-slate-50 relative pb-20 mt-[75px] md:mt-[93px] min-h-[600px]">
         <div className="cover h-[250px] md:min-h-[280px] flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500">
-            <div className="user text-center mt-16 md:mt-10">
+            <div className="user text-center animate__animated animate__zoomIn mt-16 md:mt-10">
             <h1 className="text-2xl md:text-3xl text-white font-medium">Update Profile Information</h1>
             <p className="text-slate-100 px-3 mt-1 md:mt-3 md:w-2/3 mx-auto">Update your profile with a new name and photo to personalize your account. Make sure your details reflect who you are for a more personalized experience!</p>
             </div>
         </div>
-        <form onSubmit={updateProfileData} className="profile-card flex flex-col justify-center items-center w-[350px] sm:w-6/12 mx-auto absolute bottom-4 md:bottom-28 left-0 right-0 bg-white shadow-2xl shadow-indigo-500 min-h-[300px]">
+        <form onSubmit={updateProfileData} className="profile-card animate__animated animate__fadeInUp flex flex-col justify-center items-center w-[350px] sm:w-6/12 mx-auto absolute bottom-4 md:bottom-28 left-0 right-0 bg-white shadow-2xl shadow-indigo-500 min-h-[300px]">
          <div className="grid gap-5 grid-cols-1">
           <div>
               <label className=" mb-2 font-semibold" htmlFor="name">

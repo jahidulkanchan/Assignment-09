@@ -46,7 +46,7 @@ const Brands = () => {
         {filteredBrands.map((brand) => (
           <div
             key={brand._id}
-            className="border bg-gray-50  relative p-4 rounded-lg shadow hover:shadow-lg transition-all"
+            className="border bg-gray-50 relative p-4 rounded-lg shadow hover:shadow-lg transition-all"
           >
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex flex-col items-center mb-4">

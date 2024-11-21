@@ -2,13 +2,11 @@ import { sendPasswordResetEmail } from "firebase/auth";
 import { useContext, useRef } from "react";
 import toast from "react-hot-toast";
 import { auth } from "../firebaseAuth/firebase.init";
-import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { Helmet } from "react-helmet";
 
 const ForgetPassword = () => {
   const { signOutUser } = useContext(AuthContext);
-  const navigate = useNavigate();
   const emailRef = useRef();
   const handleForgetPassword = (e) => {
     e.preventDefault();
@@ -18,7 +16,7 @@ const ForgetPassword = () => {
     } else {
       sendPasswordResetEmail(auth, email).then(() => {
         toast.success("Reset email sent, Check your email");
-        navigate("/login");
+        window.open("https://mail.google.com", "_blank")
         signOutUser();
       });
     }
