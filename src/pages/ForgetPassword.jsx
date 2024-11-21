@@ -28,14 +28,14 @@ const ForgetPassword = () => {
       <Helmet>
         <title>Coupon_kit | Reset Password</title>
       </Helmet>
-      <section className="flex flex-col pb-10 bg-slate-50 justify-center pt-[80px] mt-[50px] min-h-[50vh] items-center">
+      <section className="flex flex-col pb-10 shadow-2xl justify-center pt-[0px] md:pt-[0px] mt-[78px] md:mt-[92px] min-h-[500px] items-center">
         <h2 className="text-3xl text-center font-semibold mb-10">
           <span className="bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
             Reset
           </span>{" "}
           Your Password
         </h2>
-        <form className="w-11/12 sm:w-8/12 md:w-6/12 bg-white py-8 flex flex-col justify-center items-center border shadow-md mx-auto min-h-[300px]">
+        <form className="w-11/12 sm:w-8/12 md:w-6/12 bg-gray-50 shadow-2xl shadow-indigo-500 py-8 flex flex-col justify-center items-center border mx-auto min-h-[300px]">
           <div className="grid w-10/12 md:w-8/12 grid-cols-1">
             <div>
               <label className="text-lg mb-2 font-semibold" htmlFor="email">

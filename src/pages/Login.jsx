@@ -87,6 +87,7 @@ const Login = () => {
             <button className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:shadow-lg duration-150 w-full font-semibold px-5 py-3 mt-8 text-white">
               Log In
             </button>
+            <Link to='/forget-password' className="text-gray-500 mt-3 inline-block">Forget Password</Link>
             {errorMessage && (
               <p className="text-red-500 mt-2">
                 Something is wrong! <br /> please use correct email or password
