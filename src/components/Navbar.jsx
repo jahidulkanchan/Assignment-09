@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import LogoIcon from "../assets/logo.svg";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
@@ -10,6 +10,7 @@ import { FaUser, FaUserCircle } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const [isShow, setIsShow] = useState(false)
   const [isHidden, setIsHidden] = useState(true)
   const handleToggleUser = ()=>{
@@ -23,6 +24,8 @@ const Navbar = () => {
   const { user, signOutUser} = useContext(AuthContext);
   const handleSignOutUser = ()=>{
     signOutUser()
+    navigate('/')
+    window.scrollTo(0, 0)
   }
   useEffect(() => {
      if (user && user.displayName) {
