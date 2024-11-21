@@ -113,7 +113,7 @@
         "coupon_type": "percentage"
       }
     ],
-    "shop_link": "https://www.rangs.com.bd",
+    "shop_link": "https://www.rangsgroup.com/",
     "category": "Electronics",
     "isSaleOn": true
   },
@@ -179,7 +179,7 @@
         "coupon_type": "fixed"
       }
     ],
-    "shop_link": "https://www.bashundhara.com",
+    "shop_link": "https://www.bashundharagroup.com/",
     "category": "Food & Beverage",
     "isSaleOn": false
   },
@@ -212,7 +212,7 @@
         "coupon_type": "fixed"
       }
     ],
-    "shop_link": "https://www.walton.com",
+    "shop_link": "https://waltonbd.com/",
     "category": "Electronics",
     "isSaleOn": true
   },

@@ -23,7 +23,7 @@ const Coupon = ({ coupon, singleData }) => {
         <p><b>Expire Date:</b> <span className="text-slate-500">{expiry_date}</span></p>
         <div className="flex-grow"></div>
         <div className="flex justify-between">
-          <Link to={shop_link} className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white hover:to-sky-500 mt-4 border font-semibold px-5 py-2 w-fit">
+          <Link to={shop_link} target="_blank" className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white hover:to-sky-500 mt-4 border font-semibold px-5 py-2 w-fit">
             Use Now
           </Link>
           <CopyToClipboard text={coupon_code} onCopy={() => {
