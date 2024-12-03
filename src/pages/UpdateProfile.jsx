@@ -50,7 +50,7 @@ const UpdateProfile = () => {
                 type="text"
                 placeholder="Your Name"
                 name="name"
-                defaultValue={user.email}
+                defaultValue={user.displayName}
                 required
               />
           </div>
@@ -63,6 +63,7 @@ const UpdateProfile = () => {
                 type="text"
                 placeholder="Photo URL"
                 name="photo"
+                defaultValue={user.photoURL}
                 required
               />
           </div>

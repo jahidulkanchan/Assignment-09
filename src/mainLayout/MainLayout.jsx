@@ -1,5 +1,5 @@
 
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -8,6 +8,7 @@ const MainLayout = () => {
     <>
       <div className="container mx-auto">
         <Navbar/>
+        <ScrollRestoration />
         <Outlet/>
         <Footer/>
       </div>

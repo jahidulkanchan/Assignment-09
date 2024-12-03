@@ -1,14 +1,12 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInUser, signWithGoogle, setUser } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
-  const location = useLocation();
   // Sign up with google ====================================
 
   const handleSignGoogle = () => {
@@ -17,7 +15,6 @@ const Login = () => {
         const user = result.user;
         if (user) {
           setUser(user);
-          navigate("/");
           window.scrollTo(0, 0);
         }
       })
@@ -33,9 +30,8 @@ const Login = () => {
         const user = result.user;
         if (user) {
           setUser(user);
-          navigate(location?.state ? location.state : "/");
           e.target.reset();
-          window.scrollTo(0,0)
+          window.scrollTo(0, 0);
         }
       })
       .catch((err) => {
@@ -88,7 +84,12 @@ const Login = () => {
             <button className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:shadow-lg duration-150 w-full font-semibold px-5 py-3 mt-8 text-white">
               Log In
             </button>
-            <Link to='/forget-password' className="text-gray-500 mt-3 inline-block">Forget Password</Link>
+            <Link
+              to="/forget-password"
+              className="text-gray-500 mt-3 inline-block"
+            >
+              Forget Password
+            </Link>
             {errorMessage && (
               <p className="text-red-500 mt-2">
                 Something is wrong! <br /> please use correct email or password

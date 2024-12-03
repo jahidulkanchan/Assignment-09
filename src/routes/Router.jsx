@@ -7,9 +7,9 @@ import MyProfile from "../pages/MyProfile";
 import PrivateProfile from "../privateRoutes/PrivateProfile";
 import Brands from "../pages/Brands";
 import BrandDetails from "../pages/BrandDetails";
-import PrivateRoute from "../privateRoutes/PrivateRoute";
 import ForgetPassword from "../pages/ForgetPassword";
 import UpdateProfile from "../pages/UpdateProfile";
+import ProrectLogin from "../privateRoutes/ProrectLogin";
 
 
 export const router = createBrowserRouter([
@@ -27,11 +27,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/login',
-        element: <Login></Login>
+        element: <ProrectLogin><Login></Login></ProrectLogin>
       },
       {
         path: '/register',
-        element: <PrivateRoute><Register></Register></PrivateRoute>
+        element: <ProrectLogin><Register></Register></ProrectLogin>
       },
       {
         path: '/my-profile',
@@ -48,7 +48,8 @@ export const router = createBrowserRouter([
       },
       {
         path: '/update-profile',
-        element: <UpdateProfile/>
+        element: <PrivateProfile><UpdateProfile/></PrivateProfile>
+        
       }
     ],
     errorElement: <div className="min-h-screen text-xl flex flex-col justify-center items-center">

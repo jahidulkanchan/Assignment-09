@@ -15,7 +15,7 @@ const PrivateProfile = ({children}) => {
     return children
   }
   else{
-    return <Navigate state={pathname} to='/login'></Navigate>
+    return <Navigate to="/login" state={pathname} />;
   }
 };
 
